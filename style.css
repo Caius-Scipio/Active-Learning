@@ -1,14 +1,28 @@
-html {
-    background-color: green;
-    font-size: 20px;
-  }
-  
-  ul {
-    background: red;
-    padding: 10px;
-    border: 1px solid black;
-  }
-  
-  li {
-    margin-left: 20px;
-  }
+.task1-h1, .task1-h2 {
+  color: purple;
+}
+
+.task1-p {
+  color: gray;
+}
+
+.task2-ul {
+  border: 2px solid orange;
+}
+
+.task2-ol {
+  border: 2px solid purple;
+}
+
+.task2-ol, .task2-ul {
+  padding: 5px 20px;
+  border-radius: 4px;
+}
+
+.task3-h1, .task3-strong {
+  color: purple;
+}
+
+.taks3-em {
+  color: gray;
+}
