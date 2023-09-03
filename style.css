@@ -1,28 +1,19 @@
-.task1-h1, .task1-h2 {
+p {
+  color: gray;
+  margin: 0.5em 0;
+}
+
+h1 {
+  font-size: 2rem;
+  margin: 0;
   color: purple;
 }
 
-.task1-p {
+li {
   color: gray;
+  margin: 0.5em 0;
 }
 
-.task2-ul {
-  border: 2px solid orange;
-}
-
-.task2-ol {
-  border: 2px solid purple;
-}
-
-.task2-ol, .task2-ul {
-  padding: 5px 20px;
-  border-radius: 4px;
-}
-
-.task3-h1, .task3-strong {
-  color: purple;
-}
-
-.taks3-em {
-  color: gray;
+div {
+  height: 600px;
 }
