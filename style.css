@@ -1,23 +1,24 @@
+body {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.sender-column {
+  text-align: right;
+}
+
 h1 {
-  font-size: 2rem;
-  margin: 0;
-  color: purple;
+  font-size: 1.5em;
 }
 
-dl {
-  color: gray;
-  margin: 0.5em 0;
+h2 {
+  font-size: 1.3em;
 }
 
-dt {
-  font-weight: bold;
-  color: purple;
+p,ul,ol,dl,address {
+  font-size: 1.1em;
 }
 
-p {
-  margin: 0.5em 0;
-}
-
-abbr, time {
-  color: green;
+p, li, dd, dt, address {
+  line-height: 1.5;
 }
