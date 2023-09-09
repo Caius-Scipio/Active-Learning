@@ -24,61 +24,51 @@
 <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300%7CCinzel+Decorative:700" rel="stylesheet">
 </head>
 <body>
-    <h1>Test Your Skills</h1>
+    <h1>Mozilla Splash Page</h1>
     <p>
         Task(s) from:
-        <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Video_and_audio_content/Test_your_skills:_Multimedia_and_embedding">mozilla.org</a><br><i>Check history to see previous tasks completed</i>
+        <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Mozilla_splash_page">mozilla.org</a><br><i>Check history to see previous tasks completed</i>
     </p>
     <hr>
-    <h2>Task 1</h1>
-    <h3>Basic audio embed</h3>
-    <audio controls>
-        <source src="media/audio.mp3" type="audio/mp3" />
-    </audio>
-    <hr>
-    <h2>Task 2</h2>
-    <h3>Video embed</h3>
-    <video 
-        controls
-        width="320"
-        height="240"
-        muted>
-        <source src="media/video.mp4" 
-            type="video/mp4" />
-        <source src="media/ video.webm" 
-            type="video/webm" />
-        <track kind="subtitles" 
-            src="media/subtitles_en.vtt" 
-            srclang="en" 
-            label="Engliish" />
-    </video>
-    <p>Your browser doesn't support this video. Here is a <a href="video.mp4">link to the video</a> instead.</p>
-    <hr>
-    <h2>Task 3</h2>
-    <h3>Embedding</h3>
+    <header>
+        <h1>Mozilla</h1>
+        <img src="firefoxlogo120.png" alt="firefox logo">
 
-    <iframe
-        src="https://developer.mozilla.org/media/mypdf.pdf"
-        width="100%"
-        height="500"
-        allowfullscreen
-        sandbox>
-        <p>
-            <a href="media/mypdf.pdf">
-                Fallback link for browsers that don't support iframes
-            </a>
-        </p>
-    </iframe>
-    <hr>
-    <object 
-        data="wellness-programs/workout-log-template.pdf" 
-        type="application/pdf" 
-        width="800" 
-        height="1200">
-    <p>
-        You don't have a PDF plugin, but you can
-        <a href="https://studentaffairs.iupui.edu/doc/health/wellness-programs/workout-log-template.pdf">download the PDF file. </a>
-    </p>
-    </object>
+      </header>
+
+      <main>
+        <article>
+            <iframe width="400" height="225" src="https://www.youtube.com/embed/ojcNcvb1olg?si=WpNjsNedPq705Bzm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+          <h2>Rocking the free web</h2>
+
+          <p>Mozilla are a global community of technologists, thinkers, and builders, working together to keep the Internet alive and accessible, so people worldwide can be informed contributors and creators of the Web. We believe this act of human collaboration across an open platform is essential to individual growth and our collective future.</p>
+
+          <p>Click on the images below to find more information about the cool stuff Mozilla does. <a href="https://www.flickr.com/photos/mathiasappel/21675551065/">Red panda picture</a> by Mathias Appel.</p>
+        </article>
+
+        <div class="further-info">
+          <!-- insert images with srcsets and sizes -->
+          <a href="https://www.mozilla.org/en-US/firefox/new/">
+            <img src="firefoxlogo400.png" alt="download firefox" srcset="firefoxlogo120.png 120w, firefoxlogo400.png 400w" sizes="(max-width: 500px) 120px, 400px">
+          </a>
+          <a href="https://www.mozilla.org/">
+            <img src="mozilladinosaurhead400.png" alt="Learn more about Mozilla" srcset="mozilladinosaurhead120.png 120w, mozilladinosaurhead400.png 400w" sizes="(max-width: 500px) 120px, 400px">
+          </a>
+          <a href="https://addons.mozilla.org/">
+            <img src="firefoxaddon400.jpg" alt="Customize Firefox with add-ons" srcset="firefoxaddon120.jpg 120w, firefoxaddon400.jpg 400w" sizes="(max-width: 500px) 120px, 400px">
+          </a>
+          <a href="https://developer.mozilla.org/en-US/">
+            <img src="mdn.svg" role="img" alt="Learn web development with MDN">
+          </a>
+          <div class="clearfix"></div>
+        </div>
+
+        <div class="red-panda">
+            <source media="(max-width: 600px)" srcset="redpanda600.jpg">
+            <img src="redpanda1200.jpg" alt="a red panda">
+        </div>
+
+      </main>
 </body>
 </html>
