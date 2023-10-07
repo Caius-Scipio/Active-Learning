@@ -28,13 +28,15 @@ This repository is a collection of projects https://cssgrid.io to learn and prac
     - index.html
   - Session 4
     - index.html
+  - Session 5
+    - index.html
 
 ### Links
   - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-1
   - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-2
   - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-3
   - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-4
-
+  - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-5
 
 ## My process
 
