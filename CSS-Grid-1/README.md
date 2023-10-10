@@ -15,24 +15,26 @@ This repository is a collection of projects https://cssgrid.io to learn and prac
 
 ### File Structure
 
-  - Session 1
+  - Session 1: Intro
     - img
       - flower.jpg
       - topography.svg
     - index.html
     - styles.css
-  - Session 2
+  - Session 2: Starter files and Setup
     - index.html
     - styles.css
-  - Session 3
+  - Session 3: Grid Fundamentals
     - index.html
-  - Session 4
+  - Session 4: Grid Dev Tools
     - index.html
-  - Session 5
+  - Session 5: Grid Implicit and Explicit Tracks
     - index.html
-  - Session 6
+  - Session 6: Grid Auto-flow
     - index.html
-  - Session 7
+  - Session 7: Grid Track Sizing
+    - index.html
+  - Session 8: Grid Repeat Function
     - index.html
 
 ### Links
@@ -43,6 +45,7 @@ This repository is a collection of projects https://cssgrid.io to learn and prac
   - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-5
   - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-6
   - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-7
+  - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-8
 
 ## My process
 
