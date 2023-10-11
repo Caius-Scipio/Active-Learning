@@ -36,6 +36,7 @@ This repository is a collection of projects https://cssgrid.io to learn and prac
     - index.html
   - Session 8: Grid Repeat Function
     - index.html
+  - Session 9: Size Grid Items
 
 ### Links
   - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-1
@@ -46,6 +47,7 @@ This repository is a collection of projects https://cssgrid.io to learn and prac
   - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-6
   - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-7
   - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-8
+  - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-9
 
 ## My process
 
