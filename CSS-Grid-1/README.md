@@ -40,6 +40,8 @@ This repository is a collection of projects https://cssgrid.io to learn and prac
     - index.html
   - Session 10: Placing Grid Items
     - index.html
+  - Session 11: Spanning and Placing Exercises
+    - index.html
 
 ### Links
   - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-1
@@ -51,6 +53,8 @@ This repository is a collection of projects https://cssgrid.io to learn and prac
   - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-7
   - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-8
   - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-9
+  - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-10
+  - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-11
 
 ## My process
 
