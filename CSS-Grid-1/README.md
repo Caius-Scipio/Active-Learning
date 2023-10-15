@@ -44,6 +44,8 @@ This repository is a collection of projects https://cssgrid.io to learn and prac
     - index.html
   - Session 12: Auto-Fit and Auto-Fill
     - index.html
+  - Session 13: Min-Max
+    - index.html
 
 ### Links
   - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-1
@@ -58,6 +60,7 @@ This repository is a collection of projects https://cssgrid.io to learn and prac
   - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-10
   - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-11
   - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-12
+  - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-13
 
 ## My process
 
