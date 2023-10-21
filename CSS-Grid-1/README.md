@@ -57,6 +57,8 @@ This repository is a collection of projects https://cssgrid.io to learn and prac
     - index.html
   -Session 18 : Re-ordering Grid Items
     - index.html
+  - Session 19 : Nesting Grid with Album Layouts
+    - index.html
 
 ### Links
   - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-1
@@ -77,6 +79,7 @@ This repository is a collection of projects https://cssgrid.io to learn and prac
   - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-16
   - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-17
   - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-18
+  - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-19
 
 ## My process
 
