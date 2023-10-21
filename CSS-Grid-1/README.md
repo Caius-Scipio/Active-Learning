@@ -59,6 +59,9 @@ This repository is a collection of projects https://cssgrid.io to learn and prac
     - index.html
   - Session 19 : Nesting Grid with Album Layouts
     - index.html
+  -Session 20: CSS Grid Image Gallery
+    - index.html
+    - (1-12).jpg
 
 ### Links
   - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-1
@@ -80,6 +83,7 @@ This repository is a collection of projects https://cssgrid.io to learn and prac
   - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-17
   - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-18
   - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-19
+  - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-20
 
 ## My process
 
