@@ -68,6 +68,10 @@ This repository is a collection of projects https://cssgrid.io to learn and prac
     - index.html
   - Session 23: Bootstrappy Grid with CSS Variables
     - index.html
+  - Session 24: Responsive Website
+    - index.html
+    - styles.css
+    - (taco / queso-taco).jpg
 
 ### Links
   - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-1
@@ -93,6 +97,7 @@ This repository is a collection of projects https://cssgrid.io to learn and prac
   - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-21
   - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-22
   - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-23
+  - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-24
 
 ## My process
 
