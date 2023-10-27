@@ -1,5 +1,5 @@
 # CSS Grid [WesBos]
-This repository is a collection of projects https://cssgrid.io to learn and practice CSS Grid.
+This repository is a collection of projects https://cssgrid.io to learn and practice CSS Grid. Taking one day per session to learn and practice helped me gain a better understanding of how to use grid. Something I look forward to using in future projects. This mainly serves as a repository for my reference.
 
 ## Table of contents
 
@@ -72,32 +72,8 @@ This repository is a collection of projects https://cssgrid.io to learn and prac
     - index.html
     - styles.css
     - (taco / queso-taco).jpg
-
-### Links
-  - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-1
-  - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-2
-  - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-3
-  - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-4
-  - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-5
-  - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-6
-  - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-7
-  - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-8
-  - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-9
-  - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-10
-  - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-11
-  - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-12
-  - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-13
-  - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-14
-  - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-15
-  - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-16
-  - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-17
-  - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-18
-  - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-19
-  - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-20
-  - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-21
-  - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-22
-  - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-23
-  - https://github.com/Caius-Scipio/Active-Learning/tree/main/CSS-Grid-1/Session-24
+  - Session 25: Blog Layout
+    - index.html
 
 ## My process
 
