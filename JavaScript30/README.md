@@ -29,6 +29,7 @@ This repository is a collection of projects https://javascript30.com/ to practic
   - Session1_index.html // Drum Kit
   - Session1_styles.css
   - Session2_index.html // CSS + JS Clock
+  - Session3_index.html // CSS Variables
 
 ## My process
 
