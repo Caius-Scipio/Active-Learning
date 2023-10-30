@@ -15,65 +15,41 @@ This repository is a collection of projects https://cssgrid.io to learn and prac
 
 ### File Structure
 
-  - Session 1: Intro
-    - img
-      - flower.jpg
-      - topography.svg
-    - index.html
-    - styles.css
-  - Session 2: Starter files and Setup
-    - index.html
-    - styles.css
-  - Session 3: Grid Fundamentals
-    - index.html
-  - Session 4: Grid Dev Tools
-    - index.html
-  - Session 5: Grid Implicit and Explicit Tracks
-    - index.html
-  - Session 6: Grid Auto-flow
-    - index.html
-  - Session 7: Grid Track Sizing
-    - index.html
-  - Session 8: Grid Repeat Function
-    - index.html
-  - Session 9: Size Grid Items
-    - index.html
-  - Session 10: Placing Grid Items
-    - index.html
-  - Session 11: Spanning and Placing Exercises
-    - index.html
-  - Session 12: Auto-Fit and Auto-Fill
-    - index.html
-  - Session 13: Min-Max
-    - index.html
-  - Session 14: Grid Template Areas
-    - index.html
-    - index1.html
-  - Session 15: Naming Lines in CSS Grid
-    - index.html
-  - Session 16: grid-auto-flow, dense, Block Fitting
-    - index.html
-  - Session 17: Grid Alignemnt + Centering
-    - index.html
-  - Session 18 : Re-ordering Grid Items
-    - index.html
-  - Session 19 : Nesting Grid with Album Layouts
-    - index.html
-  - Session 20: CSS Grid Image Gallery
-    - index.html
+  - img
+    - flower.jpg
+    - topography.svg
     - (1-12).jpg
-  - Session 21: Flexbox vs Grid
-    - index.html
-  - Session 22: Recreate Codepen
-    - index.html
-  - Session 23: Bootstrappy Grid with CSS Variables
-    - index.html
-  - Session 24: Responsive Website
-    - index.html
-    - styles.css
     - (taco / queso-taco).jpg
-  - Session 25: Blog Layout
-    - index.html
+
+  - Session1_index.html // Intro
+  - Session1_styles.css
+  - Session2_index.html // Starter files and Setup
+  - Session2_styles.css
+  - Session3_index.html // Grid Fundamentals
+  - Session4_index.html // Grid Dev Tools
+  - Session5_index.html // Grid Implicit and Explicit Tracks
+  - Session6_index.html // Grid Auto-flow
+  - Session7_index.html // Grid Track Sizing
+  - Session8_index.html // Grid Repeat Function
+  - Session9_index.html // Size Grid Items
+  - Session10_index.htm // Placing Grid Items
+  - Session11_index.html // Spanning and Placing Exercises
+  - Session12_index.html // Auto-Fit and Auto-Fill
+  - Session13_index.html // Min-Max
+  - Session14a_index.html // Grid Template Areas 1
+  - Session14b_index.html // Grid Template Areas 2
+  - Session15_index.html // Naming Lines in CSS Grid
+  - Session16_index.html // grid-auto-flow, dense, Block Fitting
+  - Session17_index.html // Grid Alignemnt + Centering
+  - Session18_index.html // Re-ordering Grid Items
+  - Session19_index.html // Nesting Grid with Album Layouts
+  - Session20_index.html // CSS Grid Image Gallery
+  - Session21_index.html // Flexbox vs Grid
+  - Session22_index.html // Recreate Codepen
+  - Session23_index.html // Bootstrappy Grid with CSS Variables
+  - Session24_index.html // Responsive Website
+  - Session24_styles.css
+  - Session25_index.html // Blog Layout
 
 ## My process
 
