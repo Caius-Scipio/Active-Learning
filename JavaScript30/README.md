@@ -34,6 +34,7 @@ This repository is a collection of projects https://javascript30.com/ to practic
   - Session5_index.html // Flex Panel Gallery
   - Session6_index.html // AJAX Type Ahead
   - Session7_index.html // Array Cardio 2
+  - Session8_index.html // HTML5 Canvas
 
 ## My process
 
