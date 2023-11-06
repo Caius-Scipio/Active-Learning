@@ -17,6 +17,7 @@ This repository is a collection of projects https://javascript30.com/ to practic
   - img
     - background.jpg
   - sound
+    - 65233414.mp4
     - boom.wav
     - clap.wav
     - hihat.wav
@@ -37,6 +38,9 @@ This repository is a collection of projects https://javascript30.com/ to practic
   - Session8_index.html // HTML5 Canvas
   - Session9_index.html // Dev Tool Tricks
   - Session10_index.html // Hold Shift to Check Multiple Checkboxes
+  - Session11_index.html // Custom HTML5 Video Player
+  - Session11_styles.css
+  - Session11_scripts.js
 
 ## My process
 
