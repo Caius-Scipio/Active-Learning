@@ -41,6 +41,8 @@ This repository is a collection of projects https://javascript30.com/ to practic
   - Session11_index.html // Custom HTML5 Video Player
   - Session11_styles.css
   - Session11_scripts.js
+  - Session12_index.html // Konami Code
+  - Session12_cornify.js
 
 ## My process
 
