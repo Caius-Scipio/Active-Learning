@@ -16,6 +16,7 @@ This repository is a collection of projects https://javascript30.com/ to practic
 
   - img
     - background.jpg
+    - oh-la-la.jpg
   - sound
     - 65233414.mp4
     - boom.wav
@@ -45,6 +46,8 @@ This repository is a collection of projects https://javascript30.com/ to practic
   - Session12_cornify.js
   - Session13_index.html // Slide in on Scroll
   - Session14_index.html // JS Reference vs Copy
+  - Session15_index.html // LocalStorage and Event Delegation
+  - Session15_styles.css
 
 ## My process
 
