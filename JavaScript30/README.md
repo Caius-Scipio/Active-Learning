@@ -49,6 +49,7 @@ This repository is a collection of projects https://javascript30.com/ to practic
   - Session15_index.html // LocalStorage and Event Delegation
   - Session15_styles.css
   - Session16_index.html // Move Shadow
+  - Session17_index.html // Sort without Articles
 
 ## My process
 
