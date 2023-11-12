@@ -48,6 +48,7 @@ This repository is a collection of projects https://javascript30.com/ to practic
   - Session14_index.html // JS Reference vs Copy
   - Session15_index.html // LocalStorage and Event Delegation
   - Session15_styles.css
+  - Session16_index.html // Move Shadow
 
 ## My process
 
