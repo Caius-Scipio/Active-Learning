@@ -50,6 +50,7 @@ This repository is a collection of projects https://javascript30.com/ to practic
   - Session15_styles.css
   - Session16_index.html // Move Shadow
   - Session17_index.html // Sort without Articles
+  - Session18_index.html // Adding Time with Reduce
 
 ## My process
 
