@@ -54,6 +54,7 @@ This repository is a collection of projects https://javascript30.com/ to practic
   - Session19_index.html // WebCam Fun
   - Session20_index.html // Speech Detection
   - session21_index.html // Geolocation
+  - Session22_index.html // Follow Along Links
 
 ## My process
 
