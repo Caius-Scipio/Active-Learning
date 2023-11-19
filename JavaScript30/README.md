@@ -55,6 +55,7 @@ This repository is a collection of projects https://javascript30.com/ to practic
   - Session20_index.html // Speech Detection
   - session21_index.html // Geolocation
   - Session22_index.html // Follow Along Links
+  - Session23_index.html // Speech Synthesis
 
 ## My process
 
