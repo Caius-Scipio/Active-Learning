@@ -56,6 +56,7 @@ This repository is a collection of projects https://javascript30.com/ to practic
   - session21_index.html // Geolocation
   - Session22_index.html // Follow Along Links
   - Session23_index.html // Speech Synthesis
+  - Session24_index.html // Sticky Nav
 
 ## My process
 
