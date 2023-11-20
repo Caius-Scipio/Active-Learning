@@ -57,6 +57,7 @@ This repository is a collection of projects https://javascript30.com/ to practic
   - Session22_index.html // Follow Along Links
   - Session23_index.html // Speech Synthesis
   - Session24_index.html // Sticky Nav
+  - Session25_index.html // Understand JS Capture
 
 ## My process
 
