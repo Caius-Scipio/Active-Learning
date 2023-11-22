@@ -59,6 +59,7 @@ This repository is a collection of projects https://javascript30.com/ to practic
   - Session24_index.html // Sticky Nav
   - Session25_index.html // Understand JS Capture
   - Session26_index.html // Follow Along Nav
+  - Session27_index.html // Click and Drag to Scroll
 
 ## My process
 
