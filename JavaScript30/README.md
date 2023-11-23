@@ -60,6 +60,7 @@ This repository is a collection of projects https://javascript30.com/ to practic
   - Session25_index.html // Understand JS Capture
   - Session26_index.html // Follow Along Nav
   - Session27_index.html // Click and Drag to Scroll
+  - Session28_index.html // Video Speed Controller
 
 ## My process
 
