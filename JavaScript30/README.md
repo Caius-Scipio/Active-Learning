@@ -61,6 +61,7 @@ This repository is a collection of projects https://javascript30.com/ to practic
   - Session26_index.html // Follow Along Nav
   - Session27_index.html // Click and Drag to Scroll
   - Session28_index.html // Video Speed Controller
+  - Session29_index.html // Countdown Clock
 
 ## My process
 
