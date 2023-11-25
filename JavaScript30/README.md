@@ -17,6 +17,8 @@ This repository is a collection of projects https://javascript30.com/ to practic
   - img
     - background.jpg
     - oh-la-la.jpg
+    - dirt.svg
+    - mole.svg
   - sound
     - 65233414.mp4
     - boom.wav
@@ -62,6 +64,7 @@ This repository is a collection of projects https://javascript30.com/ to practic
   - Session27_index.html // Click and Drag to Scroll
   - Session28_index.html // Video Speed Controller
   - Session29_index.html // Countdown Clock
+  - Session30_index.html // Whack A Mole Game
 
 ## My process
 
