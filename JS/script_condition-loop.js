@@ -3,6 +3,15 @@
  * https://www.w3resource.com/javascript-exercises/javascript-conditional-statements-and-loops-exercises.php
  *
  */
+function randomlyNegative(num) {
+  let number = num;
+
+  if (num === 0) {
+    number = 0;
+  }
+  return Math.random() < 0.5 ? -num : num;
+
+}
 
 // 1. Write a JavaScript program that displays the largest integer among two integers.
 console.log("%cJavaScript Conditional Statements and loops #1", "color: red");
@@ -175,7 +184,6 @@ for (let i = 1; i <= 100; i++) {
 //     Those numbers for which this process ends in 1 are happy numbers, while those that do not end in 1 are unhappy numbers(or sad numbers)".
 //     Write a JavaScript program to find and print the first 5 happy numbers.
 console.log("%cJavaScript Conditional Statements and loops #8", "color: red");
-
 //
 //  9. Write a JavaScript program to find the Armstrong numbers of 3 digits.
 //     Note : An Armstrong number of three digits is an integer such that the sum of the cubes of its digits is equal to the number itself.
