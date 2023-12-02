@@ -18,8 +18,9 @@ In this folder, I am using the website linked below to work through the exercise
   - index.html
   - styles.css
   - script_main.js
+  - script_basic.js // [Exercise Collection](https://www.w3resource.com/javascript-exercises/javascript-basic-exercises.php)
   - script_condition-loop.js // [Exercise Collection](https://www.w3resource.com/javascript-exercises/javascript-conditional-statements-and-loops-exercises.php)
-  - script_event_handling // [Exercise Collection](https://www.w3resource.com/javascript-exercises/event/index.php)
+  - script_event_handling.js // [Exercise Collection](https://www.w3resource.com/javascript-exercises/event/index.php)
 
 ## My process
 As I work my way through the exercise library, I do the problems that suit my ability level and interest at the time. Each categorty way given it's own JS file. Some of the scripts need a bit of HTML and CSS to function and see a result, otherwise the results are displayed in the console. My answers will most likely not match the suggested answer, but the results should be similar.

@@ -1,6 +1,6 @@
 /**
  * List of exercises to be completed:
- *  JavaScript Basic [ 150 Exercises with Solution ]
+ *  >> JavaScript Basic [ 150 Exercises with Solution ]                                     // Currently Working On
  *  JavaScript Fundamental (ES6 version) Part-I [ 150 Exercises with Solution ]
  *  JavaScript Fundamental (ES6 version) Part-II [ 116 Exercises with Solution ]
  *  JavaScript Error Handling [ 13 Exercises with Solution ]
