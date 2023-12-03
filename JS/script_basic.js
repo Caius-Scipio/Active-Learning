@@ -7,12 +7,12 @@
 // Sample Output : Today is : Tuesday.
 // Current time is : 10 PM : 30 : 38
 console.log("%cJavaScript Basic #1", "color: red");
-const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const daysOfTheWeek = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
 let now = new Date();
-let day = weekday[now.getDay()];
+let weekday = daysOfTheWeek[now.getDay()];
 let time = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
 //
-console.log("Today is: " + day);
+console.log("Today is: " + weekday);
 console.log("Current time is " + time);
 //
 // 2. Write a JavaScript program to print the current window contents.
@@ -20,16 +20,30 @@ console.log("%cJavaScript Basic #2", "color: red");
 function printWindow() {
   window.print();
 }
-console.log("prints the windw, check the code in the JS file");
+console.log("prints the window, check the code in the JS file");
 //
 // 3. Write a JavaScript program to get the current date.
 // Expected Output :
 // mm-dd-yyyy, mm/dd/yyyy or dd-mm-yyyy, dd/mm/yyyy
-
-
+console.log("%cJavaScript Basic #3", "color: red");
+let month = now.getMonth() + 1;
+if (month < 10) { month = '0' + month };
+let day = now.getDate();
+if (day < 10) { day = '0' + day };
+let year = now.getFullYear();
+//
+console.log(month + "/" + day + "/" + year);
+// `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`
+//
 // 4. Write a JavaScript program to find the area of a triangle where three sides are 5, 6, 7.
-
-
+console.log("%cJavaScript Basic #4", "color: red");
+let sideA = 5;
+let sideB = 6;
+let sideC = 7;
+let s = (sideA + sideB + sideC) / 2;
+let area = Math.sqrt(s * (s - sideA) * (s - sideB) * (s - sideC));
+console.log("The area of a 5-6-7 triangle is: " + area);
+//
 // 5. Write a JavaScript program to rotate the string 'w3resource' in the right direction. This is done by periodically removing one letter from the string end and attaching it to the front.
 
 
@@ -48,6 +62,7 @@ console.log("prints the windw, check the code in the JS file");
 // 10. Write a JavaScript program to calculate multiplication and division of two numbers (input from the user).
 // Sample form :
 // sample form
+//
 // 11. Write a JavaScript program to convert temperatures to and from Celsius, Fahrenheit.
 // [ Formula : c/5 = (f-32)/9 [ where c = temperature in Celsius and f = temperature in Fahrenheit ]
 // Expected Output :
