@@ -184,11 +184,65 @@ for (let i = 1; i <= 100; i++) {
 //     Those numbers for which this process ends in 1 are happy numbers, while those that do not end in 1 are unhappy numbers(or sad numbers)".
 //     Write a JavaScript program to find and print the first 5 happy numbers.
 console.log("%cJavaScript Conditional Statements and loops #8", "color: red");
+function sumOfSquares(num) {
+  let sum = 0;
+  while (num > 0) {
+    const digit = num % 10;
+    sum += digit * digit;
+    num = Math.floor(num / 10);
+  }
+  return sum;
+}
+function isHappy(num) {
+  while (num !== 1 && num !== 4) {
+    num = sumOfSquares(num);
+  }
+  return num === 1;
+}
+function findHappyNumbers(n) {
+  const happyNumbers = [];
+  let num = 1;
+
+  while (happyNumbers.length < n) {
+    if (isHappy(num)) {
+      happyNumbers.push(num);
+    }
+    num++;
+  }
+
+  return happyNumbers;
+}
+const numbersHappy = findHappyNumbers(5);
+console.log("The first five happy numbers are: " + numbersHappy.join(", "));
 //
 //  9. Write a JavaScript program to find the Armstrong numbers of 3 digits.
 //     Note : An Armstrong number of three digits is an integer such that the sum of the cubes of its digits is equal to the number itself.
 //     For example, 371 is an Armstrong number since 3 ** 3 + 7 ** 3 + 1 ** 3 = 371.
 console.log("%cJavaScript Conditional Statements and loops #9", "color: red");
+function sumOfCubes(num) {
+  let sum = 0;
+  let originalNumber = num;
+
+  while (num > 0) {
+    let digit = num % 10;
+    sum += Math.pow(digit, 3);
+    num = Math.floor(num / 10);
+  }
+  return sum === originalNumber;
+}
+function findArmstrongNumbers(n) {
+  const numbers = [];
+
+  for (let i = 100; i < 1000; i++) {
+    if (sumOfCubes(i)) {
+      numbers.push(i);
+    }
+  }
+
+  return numbers;
+}
+const armstrongNumbers = findArmstrongNumbers();
+console.log("The Armstrong numbers are: " + armstrongNumbers);
 //
 //  10. Write a JavaScript program to construct the following pattern, using a nested for loop.
 //     *

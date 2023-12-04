@@ -1,13 +1,13 @@
 /**
  * List of exercises to be completed:
- *  >> JavaScript Basic [ 150 Exercises with Solution ]                                     // Currently Working On
+ *  JavaScript Basic [ 150 Exercises with Solution ]                                      // TODO # 5 - 150
  *  JavaScript Fundamental (ES6 version) Part-I [ 150 Exercises with Solution ]
  *  JavaScript Fundamental (ES6 version) Part-II [ 116 Exercises with Solution ]
  *  JavaScript Error Handling [ 13 Exercises with Solution ]
  *  JavaScript Functions [ 29 Exercises with Solution ]
  *  JavaScript Recursion [ 13 Exercises with Solution ]
- *  >> JavaScript Conditional Statements and loops [ 12 Exercises with Solution ]           // Currently Working On
- *  >> JavaScript Event Handling [ 10 exercises with solution ]                             // Currently Working On
+ *  JavaScript Conditional Statements and loops [ 12 Exercises with Solution ]            // * Completed
+ *  JavaScript Event Handling [ 10 exercises with solution ]                              // TODO # 3 - 10
  *  JavaScript Asynchronous Programming [ 9 exercises with solution ]
  *  JavaScript Object-Oriented Programming [ 12 exercises with solution ]
  *  JavaScript Math [ 114 Exercises with Solution ]
@@ -24,11 +24,8 @@
  *  JavaScript Basic Validation without Regular expression [10 Exercises with Solution ]
  *  JavaScript Sorting Algorithm [31 Exercises with Solution ]
  *  JavaScript Searching Algorithm [5 Exercises with Solution ]
- * Don't forget to do:
- *   Condition and Loops: Questions 8 and 9
- *   Event Handling: Questions 3 through 10
  */
-
+// * Use this funciton when you want to select a topic to do but can't decide
 // function selectRandomTopic(num) {
 //   console.log(Math.floor((Math.random() * num) + 1));
 // }

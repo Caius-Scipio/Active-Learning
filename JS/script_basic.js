@@ -44,9 +44,20 @@ let s = (sideA + sideB + sideC) / 2;
 let area = Math.sqrt(s * (s - sideA) * (s - sideB) * (s - sideC));
 console.log("The area of a 5-6-7 triangle is: " + area);
 //
-// 5. Write a JavaScript program to rotate the string 'w3resource' in the right direction. This is done by periodically removing one letter from the string end and attaching it to the front.
-
-
+// 5. Write a JavaScript program to rotate the string 'w3resource' in the right direction.
+// This is done by periodically removing one letter from the string end and attaching it to the front.
+console.log("%cJavaScript Basic #5", "color: red");
+function marquee(id) {
+  let element = document.querySelector(id);
+  let textNode = element.childNodes[0];
+  let text = textNode.data;
+  setInterval(function () {
+    text = text[text.length - 1] + text.substring(0, text.length - 1);
+    textNode.data = text;
+  }, 100);
+} 
+marquee("#target5");
+console.log("The marquee on the page");
 // 6. Write a JavaScript program to determine whether a given year is a leap year in the Gregorian calendar.
 
 
