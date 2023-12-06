@@ -33,7 +33,7 @@ if (day < 10) { day = '0' + day };
 let year = now.getFullYear();
 //
 console.log(month + "/" + day + "/" + year);
-// `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`
+// `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`                               // * simpler answer
 //
 // 4. Write a JavaScript program to find the area of a triangle where three sides are 5, 6, 7.
 console.log("%cJavaScript Basic #4", "color: red");
@@ -58,67 +58,71 @@ function marquee(id) {
 }
 marquee("#target5");
 console.log("The marquee on the page");
+//
 // 6. Write a JavaScript program to determine whether a given year is a leap year in the Gregorian calendar.
 console.log("%cJavaScript Basic #6", "color: red");
 function leapYear(year) {
   return (year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0);
-  // if (year === 0) {
-  //   console.log("Not Leap Year");
-  // } else if (year < 100) {
-  //   if (year % 4 === 0) {
-  //     return console.log("Leap Year");;
-  //   } else {
-  //     return console.log("Not Leap Year");;
-  //   }
-  // } else if (year > 100) {
-  //   if (year % 4 != 0) {
-  //     console.log("Not Leap Year");
-  //   } if (year % 100 === 0 && year % 400 != 0) {
-  //     console.log("Not Leap Year");
-  //   } else {
-  //     console.log("Leap Year");
-  //   }
-  // }
 }
-// return (year % 100 === 0) ? (year % 400 === 0) : (year % 4 === 0);
 console.log(leapYear(1516));
+//
 // 7. Write a JavaScript program to find out if 1st January will be a Sunday between 2014 and 2050.
 console.log("%cJavaScript Basic #7", "color: red");
-
-// 8. Write a JavaScript program where the program takes a random integer between 1 and 10, and the user is then prompted to input a guess number. 
+for (let year = 2014; year <= 2050; year++) {
+  let jan1 = new Date(year, 0, 1);
+  let jan1day = jan1.getDay();
+  (jan1day === 0) ? console.log(year + " January 1st is a Sunday") : "";
+}
+//
+// 8. Write a JavaScript program where the program takes a random integer between 1 and 10, and the user is then prompted to input a guess number.
 // The program displays a message "Good Work" if the input matches the guess number otherwise "Not matched".
 console.log("%cJavaScript Basic #8", "color: red");
 let rand = Math.floor(Math.random() * 10 + 1);
-console.log(rand);
 let choice = prompt("Choose a number between 1 and 10");
 if (rand === parseInt(choice)) {
   console.log("Good Work");
 } else {
   console.log("Not Matched");
 }
+//
 // 9. Write a JavaScript program to calculate the days left before Christmas.
 console.log("%cJavaScript Basic #9", "color: red");
-let christmas = new Date("December 25, 2023");
-console.log(christmas);
-let diff = christmas - now;
-console.log(now);
-let days = Math.floor(diff / (24 * 60 * 60 * 1000));
-console.log(days);
+let today = new Date();
+let christmas = new Date(today.getFullYear(), 11, 25);
 
+if (today.getMonth() === 11 && today.getDate() > 25) {
+    christmas.setFullYear(christmas.getFullYear() + 1);
+}
+
+const calcOneDay = 1000 * 60 * 60 * 24;
+console.log(`${Math.ceil((christmas.getTime() - today.getTime()) / calcOneDay)} days left until Christmas!`);
+//
 // 10. Write a JavaScript program to calculate multiplication and division of two numbers (input from the user).
 // Sample form :
 // sample form
+console.log("%cJavaScript Basic #10", "color: red");
 //
 // 11. Write a JavaScript program to convert temperatures to and from Celsius, Fahrenheit.
 // [ Formula : c/5 = (f-32)/9 [ where c = temperature in Celsius and f = temperature in Fahrenheit ]
 // Expected Output :
 // 60°C is 140 °F
 // 45°F is 7.222222222222222°C
-
-
+console.log("%cJavaScript Basic #11", "color: red");
+function toCelcius(f) {
+  let c = ((f - 32) / 9) * 5;
+  console.log(c + " degrees Celcius");
+}
+function toFahrenheit(c) {
+  let f = ((c / 5) * 9) + 32;
+  console.log(f + " degrees Fahrenheight");
+}
+toCelcius(45);
+toFahrenheit(60);
+//
 // 12. Write a JavaScript program to get the website URL (loading page).
-
-
+console.log("%cJavaScript Basic #12", "color: red");
+console.log(`${document.URL}`);
+//
 // 13. Write a JavaScript exercise to create a variable using a user-defined name.
 
 
