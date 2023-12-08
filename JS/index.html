@@ -1,25 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Coding Challenge Questions</title>
-  <link rel="icon" href="data:;base64,iVBORw0KGgo=">
-  <link rel="stylesheet" href="styles.css"
-  <script src="script_main.js" defer></script>
-  <script src="script_event_handling.js" defer></script>
-  <script src="script_basic.js" defer></script>
-</head>
-<body>
-  <h1>pssst ... check the JS file or console</h1>
-  <p id="target5">w3resource</p>
-  <div class="dropdown">
-    <button class="dropbtn" onclick="toggleShow()">Dropdown</button>
-    <div id="myDropdown" class="dropdown-content">
-      <a href="#">Link 1</a>
-      <a href="#">Link 2</a>
-      <a href="#">Link 3</a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Coding Challenge Questions</title>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script_main.js" defer></script>
+    <script src="script_event_handling.js" defer></script>
+    <script src="script_basic.js" defer></script>
+  </head>
+  <body>
+    <h1>pssst ... check the JS file or console</h1>
+    <p id="target5">w3resource</p>
+    <div class="dropdown">
+      <button class="dropbtn" onclick="toggleShow()">Dropdown</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="#">Link 1</a>
+        <a href="#">Link 2</a>
+        <a href="#">Link 3</a>
+      </div>
     </div>
-  </div>
-</body>
+    <div>
+      <form>
+        1st Number :
+        <input type="text" id="firstNumber" /><br />
+        2nd Number:
+        <input type="text" id="secondNumber" /><br />
+        <input type="button" onClick="multiplyBy()" value="Multiply" />
+        <input type="button" onClick="divideBy()" value="Divide" />
+      </form>
+      <p>
+        The Result is : <br />
+        <span id="result"></span>
+      </p>
+    </div>
+  </body>
 </html>

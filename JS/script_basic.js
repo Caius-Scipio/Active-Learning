@@ -117,6 +117,18 @@ console.log(
 // Sample form :
 // sample form
 console.log("%cJavaScript Basic #10", "color: red");
+function multiplyBy(firstNum, secondNum) {
+  firstNum = document.querySelector("#firstNumber").value;
+  secondNum = document.querySelector("#secondNumber").value;
+
+  document.querySelector("#result").innerHTML = firstNum * secondNum;
+}
+function divideBy(firstNum, secondNum) {
+  firstNum = document.querySelector("#firstNumber").value;
+  secondNum = document.querySelector("#secondNumber").value;
+
+  document.querySelector("#result").innerHTML = firstNum / secondNum;
+}
 //
 // 11. Write a JavaScript program to convert temperatures to and from Celsius, Fahrenheit.
 // [ Formula : c/5 = (f-32)/9 [ where c = temperature in Celsius and f = temperature in Fahrenheit ]
@@ -168,9 +180,22 @@ console.log(question16(20, 10));
 console.log(question16(5, 5));
 //
 // 17. Write a JavaScript program to compute the absolute difference between a specified number and 19. Returns triple the absolute difference if the specified number is greater than 19.
-
+console.log("%cJavaScript Basic #17", "color: red");
+const question17 = (n) => {
+  return n > 19 ? (Math.abs(19 - n)) * 3 : Math.abs(19 - n);
+}
+console.log(question17(14));
+console.log(question17(24));
+//
 // 18. Write a JavaScript program to check a pair of numbers and return true if one of the numbers is 50 or if their sum is 50.
-
+console.log("%cJavaScript Basic #18", "color: red");
+const question18 = (n1, n2) => {
+  return (n1 + n2 === 50 || (n1 || n2) === 50) ? true : false;
+}
+console.log(question18(50, 1));
+console.log(question18(1, 49));
+console.log(question18(20,20));
+//
 // 19. Write a JavaScript program to check whether a given integer is within 20 of 100 or 400.
 
 // 20. Write a JavaScript program to check two given integers whether one is positive and another one is negative.
