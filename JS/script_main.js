@@ -33,3 +33,16 @@
 // selectRandomTopic(23);
 // selectRandomTopic(23);
 // selectRandomTopic(23);
+
+function randomlyNegative(num) {
+  let number = num;
+
+  if (num === 0) {
+    number = 0;
+  }
+  return Math.random() < 0.5 ? -num : num;
+}
+
+function randomNumber() {
+  return Math.floor(Math.random() * 100 + 1);
+}

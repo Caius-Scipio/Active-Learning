@@ -3,16 +3,6 @@
  * https://www.w3resource.com/javascript-exercises/javascript-conditional-statements-and-loops-exercises.php
  *
  */
-function randomlyNegative(num) {
-  let number = num;
-
-  if (num === 0) {
-    number = 0;
-  }
-  return Math.random() < 0.5 ? -num : num;
-
-}
-
 // 1. Write a JavaScript program that displays the largest integer among two integers.
 console.log("%cJavaScript Conditional Statements and loops #1", "color: red");
 let aVar1 = Math.floor(Math.random() * 100);

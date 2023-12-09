@@ -7,15 +7,7 @@
 // Sample Output : Today is : Tuesday.
 // Current time is : 10 PM : 30 : 38
 console.log("%cJavaScript Basic #1", "color: red");
-const daysOfTheWeek = [
-  "Sunday",
-  "Monday",
-  "Tuesday",
-  "Wednesday",
-  "Thursday",
-  "Friday",
-  "Saturday",
-];
+const daysOfTheWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 let now = new Date();
 let weekday = daysOfTheWeek[now.getDay()];
 let time = now.getHours() + ":" + now.getMinutes() + ":" + now.getSeconds();
@@ -107,11 +99,7 @@ if (today.getMonth() === 11 && today.getDate() > 25) {
 }
 
 const calcOneDay = 1000 * 60 * 60 * 24;
-console.log(
-  `${Math.ceil(
-    (christmas.getTime() - today.getTime()) / calcOneDay
-  )} days left until Christmas!`
-);
+console.log(`${Math.ceil((christmas.getTime() - today.getTime()) / calcOneDay)} days left until Christmas!`);
 //
 // 10. Write a JavaScript program to calculate multiplication and division of two numbers (input from the user).
 // Sample form :
@@ -182,26 +170,49 @@ console.log(question16(5, 5));
 // 17. Write a JavaScript program to compute the absolute difference between a specified number and 19. Returns triple the absolute difference if the specified number is greater than 19.
 console.log("%cJavaScript Basic #17", "color: red");
 const question17 = (n) => {
-  return n > 19 ? (Math.abs(19 - n)) * 3 : Math.abs(19 - n);
-}
+  return n > 19 ? Math.abs(19 - n) * 3 : Math.abs(19 - n);
+};
 console.log(question17(14));
 console.log(question17(24));
 //
 // 18. Write a JavaScript program to check a pair of numbers and return true if one of the numbers is 50 or if their sum is 50.
 console.log("%cJavaScript Basic #18", "color: red");
 const question18 = (n1, n2) => {
-  return (n1 + n2 === 50 || (n1 || n2) === 50) ? true : false;
-}
+  return n1 + n2 === 50 || (n1 || n2) === 50 ? true : false;
+};
 console.log(question18(50, 1));
 console.log(question18(1, 49));
-console.log(question18(20,20));
+console.log(question18(20, 20));
 //
 // 19. Write a JavaScript program to check whether a given integer is within 20 of 100 or 400.
-
+console.log("%cJavaScript Basic #19", "color: red");
+const question19 = (n) => Math.abs(100 - n) < 21 || Math.abs(400 - n) < 21;
+console.log(question19(121));
+console.log(question19(100));
+console.log(question19(79));
+console.log(question19(422));
+console.log(question19(400));
+console.log(question19(378));
+//
 // 20. Write a JavaScript program to check two given integers whether one is positive and another one is negative.
-
+console.log("%cJavaScript Basic #20", "color: red");
+const question20 = (n) => {
+  return n >= 0 ? "It's positive" : "It's negative";
+};
+console.log(question20(1));
+console.log(question20(-1));
+console.log(question20(0));
+console.log(question20(randomlyNegative(randomNumber())));
+//
 // 21. Write a JavaScript program to create another string by adding "Py" in front of a given string. If the given string begins with "Py" return the original string.
-
+console.log("%cJavaScript Basic #21", "color: red");
+const question21 = (str) => {
+  return (str === null || str === undefined || str.substring(0, 2) === "Py") ? str : `Py${str}`;
+};
+console.log(question21("Python"));
+console.log(question21("thon"));
+console.log(question21("python"));
+//
 // 22. Write a JavaScript program to remove a character at the specified position in a given string and return the modified string.
 
 // 23. Write a JavaScript program to create a new string from a given string by changing the position of the first and last characters. The string length must be broader than or equal to 1.
