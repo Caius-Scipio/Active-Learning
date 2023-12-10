@@ -207,18 +207,37 @@ console.log(question20(randomlyNegative(randomNumber())));
 // 21. Write a JavaScript program to create another string by adding "Py" in front of a given string. If the given string begins with "Py" return the original string.
 console.log("%cJavaScript Basic #21", "color: red");
 const question21 = (str) => {
-  return (str === null || str === undefined || str.substring(0, 2) === "Py") ? str : `Py${str}`;
+  return str === null || str === undefined || str.substring(0, 2) === "Py" ? str : `Py${str}`;
 };
 console.log(question21("Python"));
 console.log(question21("thon"));
 console.log(question21("python"));
 //
 // 22. Write a JavaScript program to remove a character at the specified position in a given string and return the modified string.
-
+console.log("%cJavaScript Basic #22", "color: red");
+const question22 = (str, n) => {
+  let str1 = str.substring(str, n);
+  let str2 = str.substring(n + 1, str.length);
+  return str1 + str2;
+};
+console.log(question22("abcdefg", 2));
+//
 // 23. Write a JavaScript program to create a new string from a given string by changing the position of the first and last characters. The string length must be broader than or equal to 1.
-
+console.log("%cJavaScript Basic #23", "color: red");
+const question23 = (str) => {
+  let baseStr = str.substring(1, str.length - 1);
+  return str.charAt(str.length - 1) + baseStr + str.charAt(0);
+}
+console.log(question23("abcdefg"));
+//
 // 24. Write a JavaScript program to create another string from a given string with the first character of the given string added to the front and back.
-
+console.log("%cJavaScript Basic #24", "color: red");
+const question24 = (str) => {
+  let first = str.substring(0, 1);
+  return first + str + first;
+}
+console.log(question24("abcdefg"));
+//
 // 25. Write a JavaScript program to check whether a given positive number is a multiple of 3 or 7.
 
 // 26. Write a JavaScript program to create a string from a given string. This is done by taking the last 3 characters and adding them at both the front and back. The string length must be 3 or more.
