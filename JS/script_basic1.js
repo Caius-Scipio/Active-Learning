@@ -178,7 +178,7 @@ console.log(question17(24));
 // 18. Write a JavaScript program to check a pair of numbers and return true if one of the numbers is 50 or if their sum is 50.
 console.log("%cJavaScript Basic #18", "color: red");
 const question18 = (n1, n2) => {
-  return n1 + n2 === 50 || (n1 || n2) === 50 ? true : false;
+  return n1 + n2 === 50 || (n1 || n2) === 50;
 };
 console.log(question18(50, 1));
 console.log(question18(1, 49));
@@ -227,7 +227,7 @@ console.log("%cJavaScript Basic #23", "color: red");
 const question23 = (str) => {
   let baseStr = str.substring(1, str.length - 1);
   return str.charAt(str.length - 1) + baseStr + str.charAt(0);
-}
+};
 console.log(question23("abcdefg"));
 //
 // 24. Write a JavaScript program to create another string from a given string with the first character of the given string added to the front and back.
@@ -235,14 +235,14 @@ console.log("%cJavaScript Basic #24", "color: red");
 const question24 = (str) => {
   let first = str.substring(0, 1);
   return first + str + first;
-}
+};
 console.log(question24("abcdefg"));
 //
 // 25. Write a JavaScript program to check whether a given positive number is a multiple of 3 or 7.
 console.log("%cJavaScript Basic #25", "color: red");
 const question25 = (n) => {
   return n % 3 === 0 || n % 7 === 0 ? "Multiple of 3 or 7" : "Not a multiple of 3 or 7";
-}
+};
 console.log(question25(randomNumber()));
 console.log(question25(randomNumber()));
 console.log(question25(randomNumber()));

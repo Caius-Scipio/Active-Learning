@@ -18,7 +18,8 @@ In this folder, I am using the website linked below to work through the exercise
   - index.html
   - styles.css
   - script_main.js
-  - script_basic.js // [Exercise Collection](https://www.w3resource.com/javascript-exercises/javascript-basic-exercises.php)
+  - script_basic1.js // [Exercise Collection 1-25](https://www.w3resource.com/javascript-exercises/javascript-basic-exercises.php)
+  - script_basic2.js // [Exercise Collection 25-50](https://www.w3resource.com/javascript-exercises/javascript-basic-exercises.php)
   - script_condition-loop.js // [Exercise Collection](https://www.w3resource.com/javascript-exercises/javascript-conditional-statements-and-loops-exercises.php)
   - script_event_handling.js // [Exercise Collection](https://www.w3resource.com/javascript-exercises/event/index.php)
 

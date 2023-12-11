@@ -17,18 +17,47 @@ function modifywithJava(str) {
   if (str.length < 4) {
     return false;
   }
-  return (str.substring(0, 4) != "Java") ? false : true;
+  return str.substring(0, 4) != "Java" ? false : true;
 }
 console.log(modifywithJava("PHP"));
 console.log(modifywithJava("JavaScript"));
 console.log(modifywithJava("Script"));
 //
 // 28. Write a JavaScript program to check whether two given integer values are in the range 50..99 (inclusive). Return true if either of them falls within the range.
-
+console.log("%cJavaScript Basic #28", "color: red");
+const question28 = (n1, n2) => {
+  return (n1 >= 50 && n1 <= 99) || (n2 >= 50 && n2 <= 99);
+};
+console.log(question28(48, 49));
+console.log(question28(49, 50));
+console.log(question28(99, 100));
+console.log(question28(100, 101));
+//
 // 29. Write a JavaScript program to check whether three given integer values are in the range 50..99 (inclusive). Return true if one or more of them are in the specified range.
-
+console.log("%cJavaScript Basic #29", "color: red");
+const question29 = (n1, n2, n3) => {
+  return (n1 >= 50 && n1 <= 99) || (n2 >= 50 && n2 <= 99) || (n3 >= 50 && n3 <= 99);
+};
+console.log(question29(50, 90, 99));
+console.log(question29(5, 9, 199));
+console.log(question29(65, 89, 199));
+console.log(question29(65, 9, 199));
+//
 // 30. Write a JavaScript program to check whether a string "Script" appears at the 5th (index 4) position in a given string. If "Script" appears in the string, return the string without "Script" otherwise return the original one.
-
+console.log("%cJavaScript Basic #30", "color: red");
+function removeScript(str) {
+  if (str.length < 6) {
+    return str;
+  }
+  let segment = str.substring(4, 10);
+  if (segment === "Script") {
+    return str.substring(0, 4) + str.substring(10, str.length);
+  }
+  return str;
+}
+console.log(removeScript("JavaScript"));
+console.log(removeScript("CoffeeScript"));
+//
 // 31. Write a JavaScript program to find the largest of three given integers.
 
 // 32. Write a JavaScript program to find the closest value to 100 from two numerical values.
