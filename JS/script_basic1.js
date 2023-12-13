@@ -247,3 +247,236 @@ console.log(question25(randomNumber()));
 console.log(question25(randomNumber()));
 console.log(question25(randomNumber()));
 //
+// 26. Write a JavaScript program to create a string from a given string. This is done by taking the last 3 characters and adding them at both the front and back. The string length must be 3 or more.
+console.log("%cJavaScript Basic #26", "color: red");
+function modifyString(str) {
+  if (str.length >= 3) {
+    let segment = str.substring(str.length - 3);
+    return segment + str + segment;
+  }
+  return "String is not long enough";
+}
+console.log(modifyString("my"));
+console.log(modifyString("wordnot"));
+console.log(modifyString("workingnot"));
+//
+// 27. Write a JavaScript program to check whether a string starts with 'Java' if it does not otherwise.
+console.log("%cJavaScript Basic #27", "color: red");
+function modifywithJava(str) {
+  if (str.length < 4) {
+    return false;
+  }
+  return str.substring(0, 4) != "Java" ? false : true;
+}
+console.log(modifywithJava("PHP"));
+console.log(modifywithJava("JavaScript"));
+console.log(modifywithJava("Script"));
+//
+// 28. Write a JavaScript program to check whether two given integer values are in the range 50..99 (inclusive). Return true if either of them falls within the range.
+console.log("%cJavaScript Basic #28", "color: red");
+const question28 = (n1, n2) => {
+  return (n1 >= 50 && n1 <= 99) || (n2 >= 50 && n2 <= 99);
+};
+console.log("Should be False: " + question28(48, 49));
+console.log("Should be True: " + question28(49, 50));
+console.log("Should be True: " + question28(99, 100));
+console.log("Should be False: " + question28(100, 101));
+//
+// 29. Write a JavaScript program to check whether three given integer values are in the range 50..99 (inclusive). Return true if one or more of them are in the specified range.
+console.log("%cJavaScript Basic #29", "color: red");
+const question29 = (n1, n2, n3) => {
+  return (n1 >= 50 && n1 <= 99) || (n2 >= 50 && n2 <= 99) || (n3 >= 50 && n3 <= 99);
+};
+console.log("Should be True: " + question29(50, 90, 99));
+console.log("Should be False: " + question29(5, 9, 199));
+console.log("Should be True: " + question29(65, 89, 199));
+console.log("Should be True: " + question29(65, 9, 199));
+//
+// 30. Write a JavaScript program to check whether a string "Script" appears at the 5th (index 4) position in a given string. If "Script" appears in the string, return the string without "Script" otherwise return the original one.
+console.log("%cJavaScript Basic #30", "color: red");
+function removeScript(str) {
+  if (str.length < 6) {
+    return str;
+  }
+  let segment = str.substring(4, 10);
+  if (segment === "Script") {
+    return str.substring(0, 4) + str.substring(10, str.length);
+  }
+  return str;
+}
+console.log(removeScript("JavaScript"));
+console.log(removeScript("CoffeeScript"));
+//
+// 31. Write a JavaScript program to find the largest of three given integers.
+console.log("%cJavaScript Basic #31", "color: red");
+function findGreaterInteger(n1, n2, n3) {
+  let value = 0;
+  value = n1 > n2 ? n1 : n2;
+  value = n3 > value ? n3 : value;
+  return value;
+}
+console.log("Should be 3: " + findGreaterInteger(1, 2, 3));
+console.log("Should be 3: " + findGreaterInteger(2, 3, 1));
+console.log("Should be 3: " + findGreaterInteger(3, 1, 2));
+//
+// 32. Write a JavaScript program to find the closest value to 100 from two numerical values.
+console.log("%cJavaScript Basic #32", "color: red");
+function closertoOneHundred(n1, n2) {
+  if (n1 != n2) {
+    let n1Difference = Math.abs(100 - n1);
+    let n2Difference = Math.abs(100 - n2);
+    if (n1Difference < n2Difference) {
+      return n1;
+    }
+    if (n1Difference > n2Difference) {
+      return n2;
+    }
+    return 0;
+  } else {
+    return false;
+  }
+}
+console.log("Should be 99: " + closertoOneHundred(99, 102));
+console.log("Should be 101: " + closertoOneHundred(101, 50));
+console.log("Should be False: " + closertoOneHundred(90, 90));
+console.log("Should be 0: " + closertoOneHundred(80, 120));
+//
+// 33. Write a JavaScript program to check whether two numbers are in the range 40..60 or 70..100 inclusive.
+console.log("%cJavaScript Basic #33", "color: red");
+const withinRanges = (n1, n2) => {
+  return (n1 >= 40 && n1 <= 60 && n2 >= 40 && n2 <= 60) || (n1 >= 70 && n1 <= 100 && n2 >= 70 && n2 <= 100)
+    ? true
+    : false;
+};
+console.log("Should be True: " + withinRanges(44, 56));
+console.log("Should be False: " + withinRanges(50, 89));
+console.log("Should be True: " + withinRanges(70, 95));
+//
+// 34. Write a JavaScript program to find the largest number from the two given positive integers. The two numbers are in the range 40..60 inclusive.
+console.log("%cJavaScript Basic #34", "color: red");
+function withinRange(n1, n2) {
+  if (n1 >= 40 && n1 <= 60 && n2 >= 40 && n2 <= 60) {
+    return n1 > n2 ? n1 : n2;
+  } else if (n1 === n2) {
+    return "They are the same number";
+  } else {
+    return "They are out of bounds";
+  }
+}
+console.log(withinRange(45, 60));
+console.log(withinRange(25, 60));
+console.log(withinRange(45, 80));
+//
+// 35. Write a program to check whether a specified character exists between the 2nd and 4th positions in a given string.
+console.log("%cJavaScript Basic #35", "color: red");
+function checkCharacter(str, c) {
+  let segment = str.substring(1, 4);
+  if (str.length < 5) {
+    return "Not long enough";
+  }
+  return segment.includes(c, 0);
+}
+console.log("Should be True: " + checkCharacter("Python", "y"));
+console.log("Should be True: " + checkCharacter("JavaScript", "a"));
+console.log("Should be True: " + checkCharacter("Console", "o"));
+console.log("Should be False: " + checkCharacter("Console", "C"));
+console.log("Should be False: " + checkCharacter("Console", "e"));
+console.log("Should be False: " + checkCharacter("JavaScript", "S"));
+//
+// 36. Write a JavaScript program that checks whether the last digit of three positive integers is the same.
+console.log("%cJavaScript Basic #36", "color: red");
+function question36(n1, n2, n3) {
+  if (n1 > 0 && n2 > 0 && n3 > 0) {
+    return n1 % 10 === n2 % 10 && n2 % 10 === n3 % 10 && n1 % 10 === n3 % 10;
+  } else {
+    return false;
+  }
+}
+console.log(question36(10, 112, 4));
+console.log(question36(-20, 30, 400));
+console.log(question36(10, 20, 400));
+//
+// 37. Write a JavaScript program to produce a new string that has the first 3 characters in lower case from a given string. If the string length is less than 3 convert all the characters to upper case.
+console.log("%cJavaScript Basic #37", "color: red");
+function question37(str) {
+  if (str.length < 3) {
+    return str.toUpperCase();
+  }
+  let segmentChanged = str.substring(0, 3).toLowerCase();
+  let segmentUnchanged = str.substring(3)
+  return segmentChanged + segmentUnchanged;
+}
+console.log(question37("we"));
+console.log(question37("JAVASCRIPT"));
+//
+// 38. Write a JavaScript program to check a student's total marks in various examinations. The student will get A+ grade if the total marks are in the range 89..100 inclusive, if the examination is "Final-exam" the student will receive A+ grade and total marks must be greater than or equal to 90. If the student gets an A+ grade, return true, otherwise return false.
+console.log("%cJavaScript Basic #38", "color: red");
+function question38(score, type = " ") {
+  if (type === "final") {
+    return score >= 90;
+  } else {
+    return score >= 89;
+  }
+}
+console.log("Test should return true: " + question38(89));
+console.log("Test should return false: " + question38(88));
+console.log("Test should return false: " + question38(89, "final"));
+console.log("Test should return true: " + question38(90, "final"));
+//
+// 39. Write a JavaScript program to compute the sum of the two given integers. If the sum is in the range 50..80 return 65 otherwise return 80.
+console.log("%cJavaScript Basic #39", "color: red");
+function question39(n1, n2) {
+  return n1 + n2 >= 50 && n1 + n2 <= 80 ? 65 : 80;
+}
+console.log("Should return 80: " + question39(25, 24));
+console.log("hould return 65: " + question39(25, 25));
+console.log("hould return 65: " + question39(40, 40));
+console.log("hould return 80: " + question39(40, 41));
+//
+// 40. Write a JavaScript program to check from two given integers whether one of them is 8 or their sum or difference is 8.
+console.log("%cJavaScript Basic #40", "color: red");
+function question40(n1, n2) {
+  return (n1 === 8 || n2 === 8 || n1 + n2 === 8 || Math.abs(n1 - n2) === 8);
+}
+console.log("Should return true: " + question40(8, 20));
+console.log("Should return true: " + question40(2, 6));
+console.log("Should return true: " + question40(1, 9));
+console.log("Should return false: " + question40(9, 20));
+console.log("Should return false: " + question40(11, 18));
+console.log("Should return false: " + question40(22, 20));
+//
+// 41. Write a JavaScript program to check a set of three numbers; if the three numbers are the same return 30; otherwise return 20; and if two numbers are the same return 40.
+console.log("%cJavaScript Basic #41", "color: red");
+function question41(n1, n2, n3) {
+  if (n1 === n2 && n2 === n3) {
+    return 30;
+  }
+  if (n1 === n2 || n2 === n3 || n1 === n3) {
+    return 40;
+  }
+  return 20;
+}
+console.log("Should return 30: " + question41(1, 1, 1));
+console.log("Should return 40: " + question41(1, 2, 1));
+console.log("Should return 20: " + question41(1, 2, 3));
+//
+// 42. Write a JavaScript program to check whether three given numbers are increasing in strict or in soft mode.
+// Note: Strict mode -> 10, 15, 31 : Soft mode -> 24, 22, 31 or 22, 22, 31
+//
+// 43. Write a JavaScript program to check from three given numbers (non negative integers) that two or all of them have the same rightmost digit.
+//
+// 44. Write a JavaScript program to check from three given integers whether a number is greater than or equal to 20. It is less than the others.
+//
+// 45. Write a JavaScript program that checks two integer values and returns true if either one is 15 or if their sum or difference is 15.
+//
+// 46. Write a JavaScript program to check two given non-negative integers if one (not both) is a multiple of 7 or 11.
+//
+// 47. Write a JavaScript program to check whether a given number exists in the range 40..10000.
+// For example 40 presents in 40 and 4000
+//
+// 48. Write a JavaScript program to reverse a given string.
+//
+// 49. Write a JavaScript program to replace every character in a given string with the character following it in the alphabet.
+//
+// 50. Write a JavaScript program to capitalize the first letter of each word in a given string.
+//
