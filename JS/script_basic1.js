@@ -462,17 +462,72 @@ console.log("Should return 20: " + question41(1, 2, 3));
 //
 // 42. Write a JavaScript program to check whether three given numbers are increasing in strict or in soft mode.
 // Note: Strict mode -> 10, 15, 31 : Soft mode -> 24, 22, 31 or 22, 22, 31
+console.log("%cJavaScript Basic #42", "color: red");
+function question42(n1, n2, n3) {
+  if (n1 < n2 && n2 < n3) {
+    return "Strict mode";
+  } else if (n3 > n1) {
+    return "Soft mode";
+  } else {
+    return "Undefined";
+  }
+}
+console.log("Strict mode: " + question42(10, 15, 31));
+console.log("Soft mode: " + question42(24, 22, 31));
+console.log("Soft mode: " + question42(22, 22, 31));
 //
 // 43. Write a JavaScript program to check from three given numbers (non negative integers) that two or all of them have the same rightmost digit.
+console.log("%cJavaScript Basic #43", "color: red");
+function question43(n1, n2, n3) {
+  if (n1 % 10 === n2 % 10 || n1 % 10 === n3 % 10 || n2 % 10 === n3 % 10) {
+    return true;
+  }
+  return false;
+}
+console.log("Result is true: " + question43(1, 11, 20));
+console.log("Result is true: " + question43(1, 20, 11));
+console.log("Result is true: " + question43(1, 10, 100));
+console.log("Result is false: " + question43(1, 30, 22));
 //
 // 44. Write a JavaScript program to check from three given integers whether a number is greater than or equal to 20. It is less than the others.
+console.log("%cJavaScript Basic #44", "color: red");
+function question44(n1, n2, n3) {
+  return (n1 >= 20 && (n1 < n2 || n1 < n3)) || (n2 >= 20 && (n2 < n1 || n2 < n3)) || (n3 >= 20 && (n3 < n1 || n3 < n2))
+}
+console.log("Should be true: " + question44(23, 45, 10));
+console.log("Should be false: " + question44(23, 23, 10));
+console.log("Should be true: " + question44(21, 66, 75));
 //
 // 45. Write a JavaScript program that checks two integer values and returns true if either one is 15 or if their sum or difference is 15.
+console.log("%cJavaScript Basic #45", "color: red");
+function question45(n1, n2) {
+  return (n1 === 15 || n2 === 15) || (n1 + n2 === 15) || (Math.abs(n1 - n2) === 15);
+}
+console.log("Should be true: " + question45(7, 8));
+console.log("Should be true: " + question45(25, 15));
+console.log("Should be true: " + question45(25, 10));
+console.log("Should be false: " + question45(8, 8));
 //
 // 46. Write a JavaScript program to check two given non-negative integers if one (not both) is a multiple of 7 or 11.
+console.log("%cJavaScript Basic #46", "color: red");
+function question46(n1, n2) {
+  if ((n1 % 7 === 0 || n1 % 11 === 0) && (n2 % 7 === 0 || n2 % 11 === 0)) {
+    return false;
+  }
+  return (n1 % 7 === 0 || n1 % 11 === 0 || n2 % 7 === 0 || n2 % 11 === 0);
+}
+console.log("Should be true: " + question46(7, 8));
+console.log("Should be true: " + question46(8, 11));
+console.log("Should be true: " + question46(14, 8));
+console.log("Should be true: " + question46(8, 22));
+console.log("Should be false: " + question46(8, 9));
 //
-// 47. Write a JavaScript program to check whether a given number exists in the range 40..10000.
-// For example 40 presents in 40 and 4000
+// 47. Write a JavaScript program to check whether a given number exists in the range 40..10000. For example 40 presents in 40 and 4000
+console.log("%cJavaScript Basic #47", "color: red");
+function question47(n) {
+  return n >= 40 && n <= 10000;
+}
+console.log(question47(40));
 //
 // 48. Write a JavaScript program to reverse a given string.
 //
