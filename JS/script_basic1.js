@@ -527,11 +527,39 @@ console.log("%cJavaScript Basic #47", "color: red");
 function question47(n) {
   return n >= 40 && n <= 10000;
 }
-console.log(question47(40));
+console.log("Should be true: " + question47(40));
+console.log("Should be false: " + question47(39));
 //
 // 48. Write a JavaScript program to reverse a given string.
+console.log("%cJavaScript Basic #48", "color: red");
+function question48(str) {
+  let newStr = "";
+  for (let n = str.length, i = n; i >= 0; i--) {
+    newStr += str.charAt(i);
+  }
+  return newStr;
+}
+console.log(question48("hello, world!"));
 //
 // 49. Write a JavaScript program to replace every character in a given string with the character following it in the alphabet.
+console.log("%cJavaScript Basic #49", "color: red");
+function question49(str) {
+  let newStr = "";
+  for (let i = 0, n = str.length; i < n; i++) {
+    newStr += String.fromCharCode(str.charCodeAt(i) + 1);
+  }
+  return newStr;
+}
+console.log(question49("Hello, World!"));
 //
 // 50. Write a JavaScript program to capitalize the first letter of each word in a given string.
+console.log("%cJavaScript Basic #50", "color: red");
+function question50(str) {
+  let newStr = str.split(" ");
+  for (let i = 0, n = newStr.length; i < n; i++) {
+    newStr[i] = newStr[i][0].toUpperCase() + newStr[i].substr(1);
+  }
+  return newStr.join(" ");
+}
+console.log(question50("the quick brown fox"));
 //

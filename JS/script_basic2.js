@@ -1,9 +1,27 @@
 // 51. Write a JavaScript program to convert a given number into hours and minutes.
-
+console.log("%cJavaScript Basic #47", "color: red");
+function question51(num) {
+  let hours = Math.floor(num / 60);
+  let minutes = num % 60;
+  return `${hours} hrs and ${minutes} min`;
+}
+console.log("Should return 2 hrs and 0 min: " + question51(120));
+console.log("Should return 2 hrs and 1 min: " + question51(121));
+//
 // 52. Write a JavaScript program to convert letters of a given string alphabetically.
-
+console.log("%cJavaScript Basic #47", "color: red");
+function question52(str) {
+  return str.split("").sort().join("");
+}
+console.log("Should be \"Phnoty\": " + question52("Python"));
+//
 // 53. Write a JavaScript program to check whether the characters a and b are separated by exactly 3 places anywhere (at least once) in a given string.
-
+console.log("%cJavaScript Basic #47", "color: red");
+function question53(str) {
+  return /a.{3}b/.test(str) || /b.{3}a/.test(str);
+}
+console.log("Should be true: " + question53("chainsbrake"));
+//
 // 54. Write a JavaScript program to count the number of vowels in a given string.
 
 // 55. Write a JavaScript program to check whether a given string contains an equal number of p's and t's.
