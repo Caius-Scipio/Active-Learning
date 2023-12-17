@@ -23,17 +23,57 @@ function question53(str) {
 console.log("Should be true: " + question53("chainsbrake"));
 //
 // 54. Write a JavaScript program to count the number of vowels in a given string.
-
+console.log("%cJavaScript Basic #54", "color: red");
+function question54(str) {
+  return str.replace(/[^aeiou]/g, "").length;
+}
+console.log("Should be 4: " + question54("chainsbreak"));
+console.log("Should be 3: " + question54("JavaScript"));
+console.log("Should be 1: " + question54("Pyhton"));
+//
 // 55. Write a JavaScript program to check whether a given string contains an equal number of p's and t's.
-
+console.log("%cJavaScript Basic #55", "color: red");
+function question55(str) {
+  return str.replace(/[^p]/gi, "").length === str.replace(/[^t]/gi, "").length;
+}
+console.log("Should be false: " + question55("tint"));
+console.log("Should be true: " + question55("JavaScript"));
+console.log("Should be true: " + question55("Pyhton"));
+//
 // 56. Write a JavaScript program to divide two positive numbers and return the result as string with properly formatted commas.
-
+console.log("%cJavaScript Basic #56", "color: red");
+function question56(num1, num2) {
+  return (num1 / num2).toLocaleString();
+}
+console.log(question56(4000, 4));
+//
 // 57. Write a JavaScript program to create one string of specified copies (positive numbers) of a given string.
-
+console.log("%cJavaScript Basic #57", "color: red");
+function question57(str, num) {
+  return str.repeat(num);
+}
+console.log(question57("the", 3));
+//
 // 58. Write a JavaScript program to create an updated string of 4 copies of the last 3 characters of a given original string. The string length must be 3 and above.
-
+console.log("%cJavaScript Basic #58", "color: red");
+function question58(str) {
+  if (str.length >= 3) {
+    return str.substring(str.length - 3).repeat(4);
+  }
+  return "String length must be greater than 3"
+}
+console.log(question58("python"));
+//
 // 59. Write a JavaScript program to extract the first half of a even string.
-
+console.log("%cJavaScript Basic #59", "color: red");
+function question59(str) {
+  if (str.length % 2 === 0) {
+    return str.substring(0, str.length / 2);
+  }
+  return "String must have an even number of characters"
+}
+console.log(question59("JavaScript"));
+//
 // 60. Write a JavaScript program to create a new string without the first and last characters of a given string.
 
 // 61. Write a JavaScript program to concatenate two strings except for their first character.
