@@ -75,17 +75,59 @@ function question59(str) {
 console.log(question59("JavaScript"));
 //
 // 60. Write a JavaScript program to create a new string without the first and last characters of a given string.
-
+console.log("%cJavaScript Basic #60", "color: red");
+function question60(str) {
+  return str.substring(1, str.length - 1);
+}
+console.log(question60("JavaScript"));
+//
 // 61. Write a JavaScript program to concatenate two strings except for their first character.
-
+console.log("%cJavaScript Basic #61", "color: red");
+function question61(str1, str2) {
+  return str1.substring(1) + str2.substring(1);
+}
+console.log(question61("JavaScript", "Python"));
+//
 // 62. Write a JavaScript program to move the last three characters to the start of a given string. The string length must be greater than or equal to three.
-
+console.log("%cJavaScript Basic #62", "color: red");
+function question62(str) {
+  if (str.length > 3) {
+    return str.slice(-3) + str.slice(0, -3);
+  }
+  return `String must be at least 3 charaters long`;
+}
+console.log(question62("JavaScript"));
+//
 // 63. Write a JavaScript program to create a string using the middle three characters of a given string of odd length. The string length must be greater than or equal to three.
-
+console.log("%cJavaScript Basic #63", "color: red");
+function question63(str) {
+  if (str.length >= 3) {
+    let middle = (str.length + 1) / 2;
+    let newStr = str.slice(middle - 2, middle + 1);
+    return newStr;
+  }
+  return `String must be at least 3 characters long`;
+}
+console.log(question63("abcaaaabc"));
+//
 // 64. Write a JavaScript program to concatenate two strings and return the result. If the length of the strings does not match, then remove the characters from the longer string.
-
+console.log("%cJavaScript Basic #64", "color: red");
+function question64(str1, str2) {
+    let minimum = Math.min(str1.length, str2.length);
+    return str1.substring(str1.length - minimum) + str2.substring(str2.length - minimum);
+}
+console.log(question64("String", "String"));
+console.log(question64("JavaScript", "Python"));
+//
 // 65. Write a JavaScript program to test whether a string ends with "Script". The string length must be greater than or equal to 6.
-
+console.log("%cJavaScript Basic #65", "color: red");
+function question65(str) {
+  if (str.length >= 6) {
+    return str.substring(str.length -6) === "Script";
+  }
+  return `String is not long enough for a comparisson`
+}
+console.log(question65("JavaScript"));
 // 66. Write a JavaScript program to display the city name if the string begins with "Los" or "New" otherwise return blank.
 
 // 67. Write a JavaScript program to create a new string from a given string. This program removes the first and last characters of the string if the first or last character is 'P'. Return the original string if the condition is not satisfied.
