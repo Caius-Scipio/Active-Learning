@@ -13,7 +13,7 @@ console.log("%cJavaScript Basic #47", "color: red");
 function question52(str) {
   return str.split("").sort().join("");
 }
-console.log("Should be \"Phnoty\": " + question52("Python"));
+console.log('Should be "Phnoty": ' + question52("Python"));
 //
 // 53. Write a JavaScript program to check whether the characters a and b are separated by exactly 3 places anywhere (at least once) in a given string.
 console.log("%cJavaScript Basic #47", "color: red");
@@ -60,7 +60,7 @@ function question58(str) {
   if (str.length >= 3) {
     return str.substring(str.length - 3).repeat(4);
   }
-  return "String length must be greater than 3"
+  return "String length must be greater than 3";
 }
 console.log(question58("python"));
 //
@@ -70,7 +70,7 @@ function question59(str) {
   if (str.length % 2 === 0) {
     return str.substring(0, str.length / 2);
   }
-  return "String must have an even number of characters"
+  return "String must have an even number of characters";
 }
 console.log(question59("JavaScript"));
 //
@@ -113,8 +113,8 @@ console.log(question63("abcaaaabc"));
 // 64. Write a JavaScript program to concatenate two strings and return the result. If the length of the strings does not match, then remove the characters from the longer string.
 console.log("%cJavaScript Basic #64", "color: red");
 function question64(str1, str2) {
-    let minimum = Math.min(str1.length, str2.length);
-    return str1.substring(str1.length - minimum) + str2.substring(str2.length - minimum);
+  let minimum = Math.min(str1.length, str2.length);
+  return str1.substring(str1.length - minimum) + str2.substring(str2.length - minimum);
 }
 console.log(question64("String", "String"));
 console.log(question64("JavaScript", "Python"));
@@ -123,23 +123,73 @@ console.log(question64("JavaScript", "Python"));
 console.log("%cJavaScript Basic #65", "color: red");
 function question65(str) {
   if (str.length >= 6) {
-    return str.substring(str.length -6) === "Script";
+    return str.substring(str.length - 6) === "Script";
   }
-  return `String is not long enough for a comparisson`
+  return `String is not long enough for a comparisson`;
 }
 console.log(question65("JavaScript"));
 // 66. Write a JavaScript program to display the city name if the string begins with "Los" or "New" otherwise return blank.
-
+console.log("%cJavaScript Basic #66", "color: red");
+function question66(str) {
+  if ((str.length > 3 && str.substring(0, 3) === "Los") || str.substring(0, 3) === "New") {
+    return str;
+  }
+  return "";
+}
+console.log(question66("Los Angeles"));
+//
 // 67. Write a JavaScript program to create a new string from a given string. This program removes the first and last characters of the string if the first or last character is 'P'. Return the original string if the condition is not satisfied.
-
+console.log("%cJavaScript Basic #67", "color: red");
+function question67(str) {
+  if (str.substring(0, 1) === "P" || str.substring(str.length - 1, str.length - 1) === "P") {
+    return str.substring(1, str.length - 1);
+  }
+  return str;
+}
+console.log(question67("Python"));
+console.log(question67("JavaScript"));
+//
 // 68. Write a JavaScript program to create a new string using the first and last n characters from a given string. The string length must be larger than or equal to n.
-
+console.log("%cJavaScript Basic #68", "color: red");
+function question67(str, n) {
+  if (str.length >= n) {
+    return str.substring(0, n) + str.substring(str.length - n);
+  }
+  return `String is not long enough for the given length`;
+}
+console.log(question67("JavaScript", 2));
+//
 // 69. Write a JavaScript program to compute the sum of three elements of a given array of integers of length 3.
-
+console.log("%cJavaScript Basic #69", "color: red");
+function question69(array) {
+  let sum = 0;
+  for (let items of array) {
+    sum += items;
+  }
+  return sum;
+}
+console.log(question69([1, 2, 3]));
+//
 // 70. Write a JavaScript program to rotate the elements left in a given array of integers of length 3.
-
+console.log("%cJavaScript Basic #70", "color: red");
+function question70(array) {
+  array.push(array.shift());
+  return array;
+}
+console.log(question70([1, 2, 3]));
+//
 // 71. Write a JavaScript program to check whether 1 appears in the first or last position of a given array of integers. The array length must be larger than or equal to 1.
-
+console.log("%cJavaScript Basic #71", "color: red");
+function question71(array) {
+  if (array.length >= 1 && (array[0] === 1 || array[array.length - 1] === 1)) {
+    return true;
+  }
+  return false;
+}
+console.log(question71([1, 2, 3]));
+console.log(question71([3, 2, 1]));
+console.log(question71([2, 1, 3]));
+//
 // 72. Write a JavaScript program to check whether the first and last elements are the same in a given array of integers of length 3.
 
 // 73. Write a JavaScript program to reverse the elements of a given array of integers of length 3.
