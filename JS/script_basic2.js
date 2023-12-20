@@ -191,17 +191,61 @@ console.log(question71([3, 2, 1]));
 console.log(question71([2, 1, 3]));
 //
 // 72. Write a JavaScript program to check whether the first and last elements are the same in a given array of integers of length 3.
-
+console.log("%cJavaScript Basic #72", "color: red");
+function question72(array) {
+  return (array[0] === array[array.length - 1]);
+}
+console.log("True? " + question72([1, 2, 1]));
+console.log("False? " + question72([1, 1, 2]));
+//
 // 73. Write a JavaScript program to reverse the elements of a given array of integers of length 3.
-
+console.log("%cJavaScript Basic #73", "color: red");
+function question73(array) {
+  return array.map((element, index, arr) => arr[(arr.length - 1) - index]);
+}
+console.log("3, 2, 1? " + question73([1, 2, 3]));
+console.log("4, 3, 2, 1? " + question73([1, 2, 3, 4]));
+//
 // 74. Write a JavaScript program to find the largest value between the first and last elements and set all the other elements to that value. Display the updated array.
-
+console.log("%cJavaScript Basic #74", "color: red");
+function question74(array) {
+  let max = Math.max(...array);
+  let newArray = [];
+  for (let i = 0; i < array.length; i++) {
+    newArray.push(max);
+  }
+  return newArray;
+}
+console.log("5, 5, 5, 5, 5 ? " + question74([1, 2, 3, 4, 5]));
+//
 // 75. Write a JavaScript program to create an array taking the middle elements of the two arrays of integer and each length 3.
-
+console.log("%cJavaScript Basic #71", "color: red");
+function question75(array1, array2) {
+  let newArray = [];
+  newArray.push(array1[1], array2[1]);
+  return newArray;
+}
+console.log("2, 5? " + question75([1, 2, 3], [4, 5, 6]));
+//
 // 76. Write a JavaScript program to create an array by taking the first and last elements from a given array of integers. The length must be larger than or equal to 1.
-
+console.log("%cJavaScript Basic #71", "color: red");
+function question76(array) {
+  let newArray = [];
+  if (array.length >= 1) {
+    newArray.push(array[0], array[array.length - 1])
+  }
+  return newArray;
+}
+console.log("1, 3? " + question76([1, 2, 3]));
+//
 // 77. Write a JavaScript program to test whether an array of integers of length 2 contains 1 or 3.
-
+console.log("%cJavaScript Basic #71", "color: red");
+function question77(array) {
+  return array.includes(1) || array.includes(3);
+}
+console.log("True? " + question77([1, 2]));
+console.log("False? " + question77([2, 4]));
+//
 // 78. Write a JavaScript program to test whether an array of integers of length 2 does not contain 1 or 3.
 
 // 79. Write a JavaScript program to test whether a given array of integers contains 30 and 40 twice. The array length should be 0, 1, or 2.
