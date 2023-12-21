@@ -219,7 +219,7 @@ function question74(array) {
 console.log("5, 5, 5, 5, 5 ? " + question74([1, 2, 3, 4, 5]));
 //
 // 75. Write a JavaScript program to create an array taking the middle elements of the two arrays of integer and each length 3.
-console.log("%cJavaScript Basic #71", "color: red");
+console.log("%cJavaScript Basic #75", "color: red");
 function question75(array1, array2) {
   let newArray = [];
   newArray.push(array1[1], array2[1]);
@@ -228,7 +228,7 @@ function question75(array1, array2) {
 console.log("2, 5? " + question75([1, 2, 3], [4, 5, 6]));
 //
 // 76. Write a JavaScript program to create an array by taking the first and last elements from a given array of integers. The length must be larger than or equal to 1.
-console.log("%cJavaScript Basic #71", "color: red");
+console.log("%cJavaScript Basic #76", "color: red");
 function question76(array) {
   let newArray = [];
   if (array.length >= 1) {
@@ -239,7 +239,7 @@ function question76(array) {
 console.log("1, 3? " + question76([1, 2, 3]));
 //
 // 77. Write a JavaScript program to test whether an array of integers of length 2 contains 1 or 3.
-console.log("%cJavaScript Basic #71", "color: red");
+console.log("%cJavaScript Basic #77", "color: red");
 function question77(array) {
   return array.includes(1) || array.includes(3);
 }
@@ -247,17 +247,67 @@ console.log("True? " + question77([1, 2]));
 console.log("False? " + question77([2, 4]));
 //
 // 78. Write a JavaScript program to test whether an array of integers of length 2 does not contain 1 or 3.
-
+console.log("%cJavaScript Basic #78", "color: red"); // start
+function question78(array) {
+  if (array.indexOf(1) === -1 && array.indexOf(3) === -1) {
+    return true;
+  }
+  return false;
+}
+console.log("False? " + question78([1, 2]));
+console.log("True? " + question78([2, 4]));
+//
 // 79. Write a JavaScript program to test whether a given array of integers contains 30 and 40 twice. The array length should be 0, 1, or 2.
-
+console.log("%cJavaScript Basic #79", "color: red");
+function question79(array) {
+  let first = array[0];
+  let second = array[1];
+  return (first === 30 && second === 30) || (first === 40 && second === 40)
+}
+console.log("True? " + question79([30, 30]));
+console.log("True? " + question79([40, 40]));
+console.log("False? " + question79([30, 40]));
+console.log("False? " + question79([30, 3]));
+//
 // 80. Write a JavaScript program to swap the first and last elements of a given array of integers. The array length should be at least 1.
-
+console.log("%cJavaScript Basic #80", "color: red");
+function question80(array) {
+  [array[0], array[array.length - 1]] = [array[array.length - 1], array[0]];
+  return array;
+}
+console.log("4,3,2,1?: " + question80([1, 2, 3, 4]));
+//
 // 81. Write a JavaScript program to add two digits to a given positive integer of length two.
-
+console.log("%cJavaScript Basic #81", "color: red");
+function question81(num) {
+  return num % 10 + Math.floor(num / 10);
+}
+console.log("7? " + question81(52));
+//
 // 82. Write a JavaScript program to add two positive integers without carrying.
-
+console.log("%cJavaScript Basic #82", "color: red");
+function question82(num1, num2) {
+  let result = 0;
+  let multiplier = 1;
+  while (num1 > 0 && num2 > 0) {
+    result += multiplier * ((num1 + num2) % 10);
+    num1 = Math.floor(num1 / 10);
+    num2 = Math.floor(num2 / 10);
+    multiplier *= 10;
+  }
+  return result;
+}
+console.log("133? " + question82(222, 911));
+//
 // 83. Write a JavaScript program to find the longest string from a given array of strings.
-
+console.log("%cJavaScript Basic #83", "color: red");
+function question83(array) {
+  return array.sort(function (a, b) {
+    return b.length - a.length;
+  })[0];
+}
+console.log("aaaaa? " + question83(["a", "aa", "aaa", "aaaaa", "aaaa"]));
+//
 // 84. Write a JavaScript program to replace each character in a given string with the next in the English alphabet.
 // Note: 'a' will be replace by 'b' or 'z' would be replaced by 'a'.
 
