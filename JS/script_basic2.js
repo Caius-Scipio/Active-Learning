@@ -310,31 +310,141 @@ console.log("aaaaa? " + question83(["a", "aa", "aaa", "aaaaa", "aaaa"]));
 //
 // 84. Write a JavaScript program to replace each character in a given string with the next in the English alphabet.
 // Note: 'a' will be replace by 'b' or 'z' would be replaced by 'a'.
-
+console.log("%cJavaScript Basic #84", "color: red");
+function question84(str) {
+  return str.split('').map(n => String.fromCharCode(n.charCodeAt() + 1).replace('{','a').replace('[', 'A')).join('');
+}
+console.log("Alphabet is offset by 1: " + question84("abcz"));
+//
 // 85. Write a JavaScript program to divide a given array of positive integers into two parts. First element belongs to the first part, second element belongs to the second part, and third element belongs to the first part and so on. Now compute the sum of two parts and store it in an array of size two.
-
+console.log("%cJavaScript Basic #85", "color: red");
+function question85(array) {
+  let result = [0,0];
+  for (let i = 0; i < array.length; i++) {
+    if (i % 2) {
+      result[1] += array[i];
+    } else {
+      result[0] += array[i];
+    }
+  }
+  return result;
+}
+console.log(question85([1,3,6,2,5,10]));
+//
 // 86. Write a JavaScript program to find the types of a given angle.
 // Types of angles:
 // Acute angle: An angle between 0 and 90 degrees.
 // Right angle: An 90 degree angle.
 // Obtuse angle: An angle between 90 and 180 degrees.
 // Straight angle: A 180 degree angle.
-
+console.log("%cJavaScript Basic #86", "color: red");
+function question86(num) {
+  if (num === 180) {
+    return "Straight angle";
+  } else if (num === 90) {
+    return "Right angle";
+  } else if (num < 90) {
+    return "Acute angle";
+  } else {
+    return "Obtuse angle";
+  }
+}
+console.log(question86(100));
+console.log(question86(90));
+console.log(question86(180));
+console.log(question86(850));
+//
 // 87. Write a JavaScript program to determine if two arrays of integers of the same length are similar. The arrays will be similar if one array can be obtained from another array by swapping at most one pair of elements.
+console.log("%cJavaScript Basic #87", "color: red");
+function question87(array1, array2) {
+  for (let i = 0; i < array1.length; i++) {
+    for (let j = i; j < array1.length; j++) {
+      let result = true, temp = array1[i];
+      array1[i] = array1[j];
+      array1[j] = temp;
 
+      for (let k = 0; k < array1.length; k++) {
+        if (array1[k] !== array2[k]) {
+          result = false;
+          break;
+        }
+      }
+      if (result) {
+        return true;
+      }
+      array1[j] = array1[i];
+      array1[i] = temp;
+    }
+  }
+  return false;
+}
+console.log(question87([10, 20, 30], [10, 20, 30]));
+console.log(question87([10, 20, 30], [30, 10, 20]));
+console.log(question87(([10, 20, 30, 40]), [10, 30, 20, 40]));
+//
 // 88. Write a JavaScript program that takes two integers and a divisor. If the given divisor divides both integers and does not divide either, two specified integers are similar. Check whether two integers are similar or not.
-
+console.log("%cJavaScript Basic #88", "color: red");
+function question88(num1, num2, divisor) {
+  return num1 % divisor === num2 % divisor;
+}
+console.log(question88(10, 25, 5));
+console.log(question88(10, 20, 5));
+console.log(question88(10, 20, 4));
+//
 // 89. Write a JavaScript program to check whether it is possible to replace $ in a given expression x $ y = z with one of the four signs +, -, * or / to obtain a correct expression.
 // For example x = 10, y = 30 and z = 300, we can replace $ with a multiple operator (*) to obtain x * y = z
-
+console.log("%cJavaScript Basic #89", "color: red");
+function question89(num1, num2, result) {
+  return num1 + num2 == result || num1 * num2 == result || num1 / num2 == result || num1 - num2 == result;
+}
+console.log(question89(10, 25, 35));
+//
 // 90. Write a JavaScript program to find the kth greatest element in a given array of integers.
-
+console.log("%cJavaScript Basic #90", "color: red");
+function question90(array) {
+  let arraySorted = array.sort((a, b) => a - b);
+  return arraySorted[2];
+}
+console.log(question90([1, 2, 6, 4, 5]));
+//
 // 91. Write a JavaScript program to find the maximum possible sum of some of its k consecutive numbers (numbers that follow each other in order) in a given array of positive integers.
-
+console.log("%cJavaScript Basic #91", "color: red");
+function question91(array, k) {
+  let sum = 0;
+  let tempSum = 0;
+  for (let i = 0; i < k-1; i++) {
+    tempSum += array[i];
+  }
+  for (let i = k - 1; i < array.length; i++) {
+    tempSum += array[i];
+    if (tempSum > sum) {
+      sum = tempSum;
+    }
+    tempSum -= array[i - k + 1];
+  }
+  return sum;
+}
+console.log(question91([1, 2, 3, 14, 5], 2));
+//
 // 92. Write a JavaScript program to find the maximum difference between any two adjacent elements of a given array of integers.
-
+console.log("%cJavaScript Basic #92", "color: red");
+function question92(array) {
+  let diff = 0;
+  for (let i = 0; i < array.length; i++) {
+    if (Math.abs(array[i] - array[i - 1]) > diff) {
+      diff = Math.abs(array[i] - array[i - 1]);
+    }
+    continue;
+  }
+  return diff;
+}
+console.log(question92([1, 2, 3, 18, 9]));
 // 93. Write a JavaScript program to find the maximum difference among all possible pairs of a given array of integers.
-
+console.log("%cJavaScript Basic #93", "color: red");
+function question93(array) {
+  return Math.max(...array) - Math.min(...array);
+}
+console.log(question93([1, 2, 3, 8, 9]));
 // 94. Write a JavaScript program to find the number appearing most frequently in a given array of integers.
 
 // 95. Write a JavaScript program to replace all numbers with a specified number in an array of integers.
