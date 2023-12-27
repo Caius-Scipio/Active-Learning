@@ -42,29 +42,169 @@ function question103(num) {
 console.log(question103(1245));
 //
 // 104. Write a JavaScript program to find two elements of an array such that their absolute difference is not larger than a given integer. However, it is as close as possible to the integer.
-
+console.log("%cJavaScript Basic #104", "color: red");
+function question104(array, num) {
+  let difference = 0;
+  for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array.length; j++) {
+      if (Math.abs(array[i] - array[j]) > difference && Math.abs(array[i] - array[j]) <= num) {
+        difference = Math.abs(array[i] - array[j]);
+      }
+    }
+  }
+  return difference;
+}
+console.log(question104([12, 10, 33, 34], 10));
+console.log(question104([12, 10, 33, 34], 24));
+console.log(question104([12, 10, 33, 44], 40));
+//
 // 105. Write a JavaScript program to find the number of times to replace a given number with the sum of its digits. This is until it converts to a single-digit number.
-
+console.log("%cJavaScript Basic #105", "color: red");
+function question105(num) {
+  let sum = function (num) {
+    let sum_step = 0;
+    while (num) {
+      sum_step += num % 10;
+      num = Math.floor(num / 10);
+    }
+    return sum_step;
+  };
+  let result = 0;
+  while (num >= 10) {
+    result++;
+    num = sum(num);
+  }
+  return result;
+}
+console.log(question105(123));
+console.log(question105(156));
+//
 // 106. Write a JavaScript program to divide an integer by another integer as long as the result is an integer and return the result.
-
+console.log("%cJavaScript Basic #106", "color: red");
+function question106(num1, num2) {
+  if (num2 === 1) {
+    return num1;
+  } else {
+    while (num1 % num2 === 0) {
+      num1 /= num2;
+    }
+    return num1;
+  }
+}
+console.log(question106(-12, 2));
+console.log(question106(13, 2));
+console.log(question106(13, 1));
+//
 // 107. Write a JavaScript program to find the number of sorted pairs formed by arrays of integers. This is such that one element in the pair is divisible by the other one.
 // For example - The output of [1, 3, 2] ->2 - (1,3), (1,2).
 // The output of [2, 4, 6] -> 2 - (2,4), (2,6)
 // The output of [2, 4, 16] -> 3 - (2,4), (2,16), (4,16)
-
+console.log("%cJavaScript Basic #107", "color: red");
+function question107(array) {
+  let result = 0;
+  for (let i = 0; i < array.length; i++) {
+    for (let j = i + 1; j < array.length; j++) {
+      if (array[i] % array[j] === 0 || array[j] % array[i] === 0) {
+        result++
+      }
+    }
+  }
+  return result;
+}
+console.log(question107([2, 4, 16]));
+//
 // 108. Write a JavaScript program to create the dot products of two given 3D vectors.
 // Note: The dot product is the sum of the products of the corresponding entries of the two sequences of numbers.
-
+console.log("%cJavaScript Basic #108", "color: red");
+function question108(array1, array2) {
+  let result = 0;
+  for (let i = 0; i < 3; i++) {
+    result += array1[i] * array2[i];
+  }
+  return result;
+}
+console.log(question108([1, 2, 3], [1, 2, 3]));
+//
 // 109. Write a JavaScript program to sort an array of all prime numbers between 1 and a given integer.
+console.log("%cJavaScript Basic #109", "color: red");
+function question109(num) {
+  let primeA = [];
+  let primeB = [];
 
+  for (let i = 0; i <= num; i++) {
+    primeB.push(true);
+  }
+
+  for (let i = 2; i <= num; i++) {
+    if (primeB[i]) {
+      primeA.push(i);
+      for (let j = 1; i * j <= num; j++) {
+        primeB[i * j] = false;
+      }
+    }
+  }
+  return primeA;
+}
+console.log(question109(19));
+//
 // 110. Write a JavaScript program to find the number of even values in sequence before the first occurrence of a given number.
-
+console.log("%cJavaScript Basic #110", "color: red");
+function question110(array, num) {
+  let limit = array.indexOf(num);
+  let count = 0;
+  for (let i = 0; i < limit; i++) {
+    if (array[i] % 2 === 0) {
+      count++
+    }
+  }
+  return count;
+}
+console.log(question110([1, 2, 3, 4, 5, 6, 7, 8, 9], 5));
+console.log(question110([1, 3, 5, 6, 7, 8], 6));
+//
 // 111. Write a JavaScript program to check a number from three given numbers where two numbers are equal. Find the third one.
-
+console.log("%cJavaScript Basic #111", "color: red");
+function question111(num1, num2, num3) {
+  if (num1 !== num2 && num1 !== num3 && num2 !== num3) {
+    return `No odd man out`;
+  } else if (num1 === num2) {
+    return num3;
+  } else if (num1 === num3) {
+    return num2;
+  } else {
+    return num1;
+  }
+}
+console.log(question111(1, 2, 2));
+console.log(question111(1, 2, 3));
+//
 // 112. Write a JavaScript program to find the number of trailing zeros in the decimal representation of the factorial of a given number.
-
+console.log("%cJavaScript Basic #112", "color: red");
+function question112(num) {
+  let result = 0;
+  for (let i = 5; i <= num; i += 5) {
+    let n = i;
+    while (n % 5 === 0) {
+      n /= 5;
+      result++
+    }
+  }
+  return result;
+}
+console.log(question112(10));
+//
 // 113. Write a JavaScript program to calculate the sum of n + n/2 + n/4 + n/8 + .... where n is a positive integer and all divisions are integers.
-
+console.log("%cJavaScript Basic #113", "color: red");
+function question113(num) {
+  let result = 0;
+  while (num > 0) {
+    result += num;
+    num = Math.floor(num / 2);
+  }
+  return result;
+}
+console.log(question113(26));
+//
 // 114. Write a JavaScript program to check whether a given string represents a correct sentence or not. A string is considered a correct sentence if it starts with a capital letter and ends with a full stop (.)
 
 // 115. Write a JavaScript program to check whether a matrix is a diagonal matrix or not. In linear algebra, a diagonal matrix is a matrix in which the entries outside the main diagonal are all zero (the diagonal from the upper left to the lower right).
