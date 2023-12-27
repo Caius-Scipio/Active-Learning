@@ -206,37 +206,138 @@ function question113(num) {
 console.log(question113(26));
 //
 // 114. Write a JavaScript program to check whether a given string represents a correct sentence or not. A string is considered a correct sentence if it starts with a capital letter and ends with a full stop (.)
-
+console.log("%cJavaScript Basic #114", "color: red");
+function question114(str) {
+  let regex = /^[A-Z].*\.$/;
+  return regex.test(str)
+}
+console.log(question114(`This is correct.`));
+console.log(question114(`this is incorrect`));
+//
 // 115. Write a JavaScript program to check whether a matrix is a diagonal matrix or not. In linear algebra, a diagonal matrix is a matrix in which the entries outside the main diagonal are all zero (the diagonal from the upper left to the lower right).
 // Example:
 // [1, 0, 0], [0, 2, 0], [0, 0, 3] ]) = true
 // [1, 0, 0], [0, 2, 3], [0, 0, 3] ]) = false
-
+console.log("%cJavaScript Basic #115", "color: red");
+function question115(array) {
+  for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array.length; j++) {
+      if (i !== j && array[i][j] !== 0) {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+console.log(question115([[1, 0, 0], [0, 2, 0], [0, 0, 3]]));
+console.log(question115([[1, 0, 0], [0, 2, 3], [0, 0, 3]]));
+//
 // 116. Write a JavaScript program to find all the possible options to replace the hash in a string (Consists of digits and one hash (#)) with a digit to produce an integer divisible by 3.
 // For a string "2*0", the output should be : ["210", "240", "270"]
-
+console.log("%cJavaScript Basic #116", "color: red");
+function question116(str) {
+  let result = []
+  for (let i = 0; i <= 9; i++) {
+    let newStr = str.replace(/#/, i);
+    if (newStr % 3 === 0) {
+      result.push(newStr);
+    }
+  }
+  return result;
+}
+console.log(question116("2#0"));
+console.log(question116("4#2"));
+//
 // 117. Write a JavaScript program to check whether a given matrix is an identity matrix.
 // Note: In linear algebra, the identity matrix, or sometimes ambiguously called a unit matrix, of size n is the n ? n square matrix with ones on the main diagonal and zeros elsewhere.
 // [[1, 0, 0], [0, 1, 0], [0, 0, 1]] -> true
 // [[1, 0, 0], [0, 1, 0], [1, 0, 1]] -> false
-
+console.log("%cJavaScript Basic #117", "color: red");
+function question117(array) {
+  for (let i = 0; i < array.length; i++) {
+    for (let j = 0; j < array.length; j++) {
+      if (i === j && array[i][j] !== 1 || array[i][j] && i !== j) {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+console.log(question117([[1, 0, 0], [0, 1, 0], [0, 0, 1]]));
+console.log(question117([[1, 0, 0], [0, 1, 0], [1, 0, 1]]));
+//
 // 118. Write a JavaScript program to check whether a given number is in a given range.
-
+console.log("%cJavaScript Basic #118", "color: red");
+function question118(begin, check, end) {
+  return check > begin && check < end ? `The number is in the given range` : `The number is outside the given range`;
+}
+console.log(question118(1, 2, 3));
+console.log(question118(1, 2, -3));
+//
 // 119. Write a JavaScript program to check if a given integer has an increasing digit sequence.
-
+console.log("%cJavaScript Basic #119", "color: red");
+function question119(num) {
+  let array = num.toString().split("").map(Number);
+  for (let i = 0; i < array.length - 1; i++) {
+    if (parseFloat(array[i]) > parseInt(array[i + 1])) {
+      return false;
+    }
+  }
+  return true;
+}
+console.log(question119(123));
+//
 // 120. Write a JavaScript program to check if a point lies strictly inside the circle.
 // Input:
 // Center of the circle (x, y)
 // Radius of circle: r
 // Point inside a circle (a, b)
-
+console.log("%cJavaScript Basic #120", "color: red");
+function question120(centerX, centerY, radius, pointX, pointY) {
+  return Math.sqrt(Math.pow(pointX-centerX, 2) + Math.pow(pointY-centerY, 2)) < radius;
+}
+console.log(question120(0, 0, 6, 2, 4));
+//
 // 121. Write a JavaScript program to check whether a given matrix is lower triangular or not.
 // Note: A square matrix is called lower triangular if all the entries above the main diagonal are zero.
-
+console.log("%cJavaScript Basic #121", "color: red");
+function question121(array) {
+  for (let i = 0; i < array.length; i++) {
+    for (var j = 0; j < array[0].length; j++) {
+      if (j > i && array[i][j] !== 0) {
+        return false;
+      }
+    }
+  }
+  return true;
+}
+console.log(question121([[1, 0, 0],[2, 0, 0],[0, 3, 3],]));
+//
 // 122. Write a JavaScript program to check whether a given array of integers represents a strictly increasing or decreasing sequence.
-
+console.log("%cJavaScript Basic #122", "color: red");
+function question122(array) {
+  let arrDirection = array[1] - array[0];
+  for (let i = 0; i < array.length; i++) {
+    if (arrDirection * (array[i + 1] - array[0]) <= 0) {
+      return false;
+    }
+  }
+  return true;
+}
+console.log(question122([1,2,3]));
+console.log(question122([3,4,1]));
+//
 // 123. Write a JavaScript program to find out if the members of a given array of integers are a permutation of numbers from 1 to a given integer.
-
+console.log("%cJavaScript Basic #123", "color: red");
+function question123(array, num) {
+  for (let i = 0; i < num; i++) {
+    if (array.indexOf(i + 1) < 0) {
+      return false;
+    }
+  }
+  return true;
+}
+console.log(question123([1,2,3,4,5], 5));
 // 124. Write a JavaScript program to create the NOR value of two given booleans.
 // Note: In boolean logic, logical nor or joint denial is a truth-functional operator which produces a result that is the negation of logical or. That is, a sentence of the form (p NOR q) is true precisely when neither p nor q is true - i.e. when both of p and q are false
 // Sample Example:
