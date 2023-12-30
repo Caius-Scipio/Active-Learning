@@ -506,18 +506,70 @@ console.log(question133(1, 2));
 console.log(question133(7, 4));
 //
 // 134. Write a JavaScript program to change the characters (lower case) in a string where a turns into z, b turns into y, c turns into x, ..., n turns into m, m turns into n, ..., z turns into a.
-
+console.log("%cJavaScript Basic #134", "color: red");
+function question134(str) {
+  let result = [];
+  for (let i = 0; i < str.length; i++) {
+    let order = str.charCodeAt(i) - "a".charCodeAt(0);
+    let change = 25 - order + "a".charCodeAt(0);
+    result.push(String.fromCharCode(change));
+  }
+  return result.join("");
+}
+console.log((question134("javascript")));
+//
 // 135. Write a JavaScript program to remove all characters from a given string that appear more than once.
-
+console.log("%cJavaScript Basic #135", "color: red");
+function question135(str) {
+  let array = str.split("");
+  let result = [];
+  for (let i = 0; i < array.length; i++) {
+    if (str.indexOf(array[i]) === str.lastIndexOf(array[i])) {
+      result.push(array[i]);
+    }
+  }
+  return result.join("");
+}
+console.log(question135("abcdabc"));
+//
 // 136. Write a JavaScript program to replace the first digit in a string (should have at least one digit) with the $ character.
-
+console.log("%cJavaScript Basic #136", "color: red");
+function question136(str) {
+  return str.replace(/\d/, "$");
+}
+console.log(question136("abc1dabc"));
+//
 // 137. Write a JavaScript program to test whether a given integer is greater than 15 and return the given number, otherwise return 15.
-
+console.log("%cJavaScript Basic #137", "color: red");
+function question137(num) {
+  return num > 15 ? num : 15;
+}
+console.log(question137(123));
+console.log(question137(10));
+//
 // 138. Write a JavaScript program to reverse the bits of a given 16-bit unsigned short integer.
-
+console.log("%cJavaScript Basic #138", "color: red");
+function question138(num) {
+  let binary = num.toString(2).padStart(16, "0");
+  let reversed = binary.split("").reverse().join("");
+  return parseInt(reversed, 2);
+}
+console.log(question138(12345));
+//
 // 139. Write a JavaScript program to find the position of the rightmost round number in an array of integers. If there are no round numbers, the function returns 0.
 // Note: A round number is informally considered to be an integer that ends with one or more zeros.
-
+console.log("%cJavaScript Basic #139", "color: red");
+function question139(arr) {
+  let result = 0;
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 10 === 0) {
+      result = i;
+    }
+  }
+  return result;
+}
+console.log(question139([1, 22, 30, 54, 56]));
+//
 // 140. Write a JavaScript program to check whether all the digits in a given number are the same or not.
 
 // 141. Write a JavaScript program to find the number of elements in both arrays.
