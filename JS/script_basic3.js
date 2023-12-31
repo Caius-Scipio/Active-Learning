@@ -662,11 +662,69 @@ function question145(num) {
 }
 console.log(question145(11));
 // 146. Write a JavaScript program to compute the sum of cubes of all integers from 1 to a given integer.
-
+console.log("%cJavaScript Basic #146", "color: red");
+function question146(num) {
+  let result = 0;
+  for (let i = 0; i <= num; i++) {
+    result += Math.pow(i, 3);
+  }
+  return result;
+}
+console.log(question146(3));
+//
 // 147. Write a JavaScript program to compute the sum of all the digits that occur in a given string.
-
+console.log("%cJavaScript Basic #147", "color: red");
+function question147(str) {
+  let result = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (/[0-9]/.test(str[i])) {
+      result += parseInt(str[i]);
+    }
+  }
+  return result;
+}
+console.log(question147("abcd12efg9"));
+//
 // 148. Write a JavaScript program to swap two halves of a given array of integers of even length.
-
-// 149. Write a JavaScript program to change the capitalization of all letters in a given string.
-
+console.log("%cJavaScript Basic #149", "color: red");
+function question149(array) {
+  for (let i = 0; i < array.length / 2; i++) {
+    let newArray = array[i];
+    array[i] = array[i + array.length / 2];
+    array[i + array.length / 2] = newArray;
+  }
+  return array;
+}
+console.log(question149([1, 2, 3, 4, 5, 6]));
+//
+//149. Write a JavaScript program to change the capitalization of all letters in a given string.
+console.log("%cJavaScript Basic #149", "color: red");
+function question149(str) {
+  let newString = "";
+  for (let i = 0; i < str.length; i++) {
+    if (/[A-Z]/.test(str[i])) {
+      newString += str[i].toLowerCase();
+    } else {
+      newString += str[i].toUpperCase();
+    }
+  }
+  return newString;
+}
+console.log(question149("Germany"));
+//
 // 150. Write a JavaScript program to swap pairs of adjacent digits of a given integer of even length.
+console.log("%cJavaScript Basic #150", "color: red");
+function question150(num) {
+  let result = 0;
+  let count = 1;
+
+  while (num != 0) {
+    let number1 = num % 10;
+    let number2 = ((num - number1) / 10) % 10;
+    result += count * (10 * number1 + number2);
+    num = Math.floor(num / 100);
+    count *= 100;
+  }
+  return result;
+}
+console.log(question150([1234]));
