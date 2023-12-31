@@ -425,7 +425,7 @@ console.log(question128(171));
 // 129. Write a JavaScript program to find the smallest prime number strictly greater than a given number.
 console.log("%cJavaScript Basic #129", "color: red");
 function question129(num) {
-    for (let count = num + 1; ; ++count) {
+  for (let count = num + 1; ; ++count) {
     let isPrime = true;
     for (let i = 2; i < Math.sqrt(count) + 1; ++i) {
       if (count % i === 0) {
@@ -516,7 +516,7 @@ function question134(str) {
   }
   return result.join("");
 }
-console.log((question134("javascript")));
+console.log(question134("javascript"));
 //
 // 135. Write a JavaScript program to remove all characters from a given string that appear more than once.
 console.log("%cJavaScript Basic #135", "color: red");
@@ -571,19 +571,96 @@ function question139(arr) {
 console.log(question139([1, 22, 30, 54, 56]));
 //
 // 140. Write a JavaScript program to check whether all the digits in a given number are the same or not.
-
+console.log("%cJavaScript Basic #140", "color: red");
+function question140(num) {
+  let array = num.toString().split("");
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] !== array[i + 1]) {
+      return false;
+    }
+    return true;
+  }
+}
+console.log(question140(123));
+console.log(question140(111));
+//
 // 141. Write a JavaScript program to find the number of elements in both arrays.
-
+console.log("%cJavaScript Basic #141", "color: red");
+function question141(array1, array2) {
+  let result = 0;
+  for (let i = 0; i < array1.length; i++) {
+    for (let j = 0; j < array2.length; j++) {
+      if (array1[i] === array2[j]) {
+        result++;
+      }
+    }
+  }
+  return result;
+}
+console.log(question141([1, 2, 3, 4], [1, 2, 3, 5]));
+//
 // 142. Write a JavaScript program to simplify a given absolute path for a file in Unix-style.
-
+console.log("%cJavaScript Basic #142", "color: red");
+function question142(path) {
+  let parts = path.split("/");
+  let new_path = [];
+  let length = 0;
+  for (let i = 0; i < parts.length; i++) {
+    let part = parts[i];
+    if (part === "." || part === "" || part === "..") {
+      if (part === ".." && length > 0) {
+        length--;
+      }
+      continue;
+    }
+    new_path[length++] = part;
+  }
+  if (length === 0) {
+    return "/";
+  }
+  let result = "";
+  for (let i = 0; i < length; i++) {
+    result += "/" + new_path[i];
+  }
+  return result;
+}
+console.log(question142("/home/var/./www/../html//sql"));
+//
 // 143. Write a JavaScript program to sort the strings of a given array of strings in order of increasing length.
 // Note: Do not change the order if the lengths of two string are same.
-
+console.log("%cJavaScript Basic #143", "color: red");
+function question143(array) {
+  let newArray = array.sort((a, b) => a.length - b.length);
+  return newArray;
+}
+console.log(question143(["xyz", "acd", "aa", "bb", "zzz", "", "a", "b"]));
 // 144. Write a JavaScript program to break an URL address and put its parts into an array.
 // Note: url structure : ://.org[/] and there may be no part in the address.
-
+console.log("%cJavaScript Basic #144", "color: red");
+function question144(address) {
+  let data = address.split("://");
+  let protocol = data[0];
+  data = data[1].split(".com");
+  let domain = data[0];
+  data = data[1].split("/");
+  if (data[1]) {
+    return [protocol, domain, data[1]];
+  }
+  return [protocol, domain];
+}
+console.log(question144("https://www.w3resource.com/javascript-exercises/"));
+//
 // 145. Write a JavaScript program to find the maximum integer n such that 1 + 2 + ... + n <= a given integer.
-
+console.log("%cJavaScript Basic #145", "color: red");
+function question145(num) {
+  let sum = 0;
+  let i = 0;
+  while (sum <= num) {
+    sum += i++;
+  }
+  return i - 2;
+}
+console.log(question145(11));
 // 146. Write a JavaScript program to compute the sum of cubes of all integers from 1 to a given integer.
 
 // 147. Write a JavaScript program to compute the sum of all the digits that occur in a given string.
