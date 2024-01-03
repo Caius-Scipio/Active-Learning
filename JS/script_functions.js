@@ -55,19 +55,61 @@ console.log(question4("webmaster"));
 // 5. Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word into upper case.
 // Example string : 'the quick brown fox'
 // Expected Output : 'The Quick Brown Fox '
-
+console.log("%cJavaScript Functions #5", "color: red");
+function question5(str) {
+  let newStr = str.split(" ");
+  let result = [];
+  for (let i = 0; i < newStr.length; i++) {
+    result.push(newStr[i].charAt(0).toUpperCase() + newStr[i].slice(1));
+  }
+  return result.join(" ");
+}
+console.log(question5("the quick brown fox"));
+//
 // 6. Write a JavaScript function that accepts a string as a parameter and finds the longest word within the string.
 // Example string : 'Web Development Tutorial'
 // Expected Output : 'Development'
-
+console.log("%cJavaScript Functions #6", "color: red");
+function question6(str) {
+  let newStr = str.split(" ");
+  let result = "";
+  for (let i = 0; i < newStr.length; i++) {
+    if (newStr[i].length > result.length) {
+      result = newStr[i];
+    }
+  }
+  return result;
+}
+console.log(question6("Web Development Tutorial"));
+//
 // 7. Write a JavaScript function that accepts a string as a parameter and counts the number of vowels within the string.
 // Note : As the letter 'y' can be regarded as both a vowel and a consonant, we do not count 'y' as vowel here.
 // Example string : 'The quick brown fox'
 // Expected Output : 5
-
+console.log("%cJavaScript Functions #7", "color: red");
+function question7(str) {
+  let vowels = "aeiouAEIOU";
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.indexOf(str[i]) !== -1) {
+      count += 1;
+    }
+  }
+  return count;
+}
+console.log(question7("The quick brown fox"));
+//
 // 8. Write a JavaScript function that accepts a number as a parameter and checks whether it is prime or not using recursion.
 // Note : A prime number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1 and itself.
-
+console.log("%cJavaScript Functions #8", "color: red");
+function question8(num) {
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) return false;
+  }
+  return true;
+}
+console.log(question8(37));
+//
 // 9. Write a JavaScript function that accepts an argument and returns the type.
 // Note : There are six possible values that typeof returns: object, boolean, function, number, string, and undefined.
 
