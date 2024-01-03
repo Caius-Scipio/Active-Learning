@@ -112,17 +112,57 @@ console.log(question8(37));
 //
 // 9. Write a JavaScript function that accepts an argument and returns the type.
 // Note : There are six possible values that typeof returns: object, boolean, function, number, string, and undefined.
-
+console.log("%cJavaScript Functions #9", "color: red");
+function question9(arg) {
+  return typeof (arg);
+}
+console.log(question9(true));
+//
 // 10. Write a JavaScript function which returns the n rows by n columns identity matrix.
-
+console.log("%cJavaScript Functions #10", "color: red");
+function question10(num) {
+  for (let i = 0; i < num; i++) {
+    for (let j = 0; j < num; j++) {
+      if (i === j) {
+        console.log(1);
+      } else {
+        console.log(0);
+      }
+    }
+    console.log("----------");
+  }
+}
+console.log(question10(4));
+//
 // 11. Write a JavaScript function that takes an array of numbers and finds the second lowest and second greatest numbers, respectively.
 // Sample array : [1,2,3,4,5]
 // Expected Output : 2,4
-
+console.log("%cJavaScript Functions #11", "color: red");
+function question11(array) {
+  let newArray = array.sort();
+  return `${newArray[1]} and ${newArray[newArray.length-2]}`;
+}
+console.log(question11([5, 3, 4, 1, 2]));
+//
 // 12. Write a JavaScript function that checks whether a number is perfect.
 // According to Wikipedia : In number theory, a perfect number is a positive integer that is equal to the sum of its proper positive divisors, that is, the sum of its positive divisors excluding the number itself (also known as its aliquot sum). Equivalently, a perfect number is a number that is half the sum of all of its positive divisors (including itself).
 // Example : The first perfect number is 6, because 1, 2, and 3 are its proper positive divisors, and 1 + 2 + 3 = 6. Equivalently, the number 6 is equal to half the sum of all its positive divisors: ( 1 + 2 + 3 + 6 ) / 2 = 6. The next perfect number is 28 = 1 + 2 + 4 + 7 + 14. This is followed by the perfect numbers 496 and 8128.
-
+console.log("%cJavaScript Functions #12", "color: red");
+function question12(num) {
+  let count = 0;
+  for (let i = 1; i <= num / 2; i++) {
+    if (num % i === 0) {
+      count += i;
+    }
+  }
+  if (count === num && count !== 0) {
+    return "Perfect it is";
+  } else {
+    return "Perfect it is not";
+  }
+}
+console.log(question12(6));
+//
 // 13. Write a JavaScript function to compute the factors of a positive integer.
 
 // 14. Write a JavaScript function to convert an amount into coins.
