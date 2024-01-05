@@ -164,18 +164,60 @@ function question12(num) {
 console.log(question12(6));
 //
 // 13. Write a JavaScript function to compute the factors of a positive integer.
-
+console.log("%cJavaScript Functions #13", "color: red");
+function question13(num) {
+  let result = [];
+  for (let i = 0; i <= num; i++) {
+    if (num % i === 0) {
+      result.push(i);
+    }
+  }
+  return result;
+}
+console.log(question13(15));
+//
 // 14. Write a JavaScript function to convert an amount into coins.
 // Sample function : amountTocoins(46, [25, 10, 5, 2, 1])
 // Here 46 is the amount. and 25, 10, 5, 2, 1 are coins.
 // Output : 25, 10, 10, 1
-
+console.log("%cJavaScript Functions #14", "color: red");
+function question14(num, array) {
+  let result = [];
+  let remainder = num;
+  for (let i = 0; i < array.length; i++) {
+    let coin = array[i];
+    let count = Math.floor(remainder / coin);
+    for (let j = 0; j < count; j++) {
+      result.push(coin);
+    }
+    remainder %= coin;
+  }
+  return result;
+}
+console.log(question14(46, [25, 10, 5, 2, 1]));
+//
 // 15. Write a JavaScript function to compute the value of bn where n is the exponent and b is the base. Accept b and n from the user and display the results.
-
+console.log("%cJavaScript Functions #15", "color: red");
+function question15(base, exponent) {
+  return Math.pow(base, exponent);
+}
+console.log(question15(2,3));
+//
 // 16. Write a JavaScript function to extract unique characters from a string.
 // Example string : "thequickbrownfoxjumpsoverthelazydog"
 // Expected Output : "thequickbrownfxjmpsvlazydg"
-
+console.log("%cJavaScript Functions #16", "color: red");
+function question16(str) {
+  let result = "";
+  for (let i = 0; i < str.length; i++) {
+    if (result.indexOf(str.charAt(i)) == -1) {
+      result += str[i];
+    }
+  }
+  return result;
+}
+console.log(question16("thequickbrownfoxjumpsoverthelazydog"));
+//
 // 17. Write a JavaScript function to get the number of occurrences of each letter in a specified string.
 
 // 18. Write a function for searching JavaScript arrays with binary searches.
