@@ -219,15 +219,70 @@ function question16(str) {
 console.log(question16("thequickbrownfoxjumpsoverthelazydog"));
 //
 // 17. Write a JavaScript function to get the number of occurrences of each letter in a specified string.
-
+console.log("%cJavaScript Functions #17", "color: red");
+function question17(str) {
+  var chars = {};
+  str.replace(/\S/g, function (char) {
+    chars[char] = (isNaN(chars[char]) ? 1 : chars[char] + 1);
+  });
+  return chars;
+}
+console.log(question17("The quick brown fox jumps over the lazy dog"));
+//
 // 18. Write a function for searching JavaScript arrays with binary searches.
 // Note : A binary search searches by splitting an array into smaller and smaller chunks until it finds the desired value.
+console.log("%cJavaScript Functions #18", "color: red");
+function question18(array, element) {
+  let midPosition = Math.floor(array.length / 2);
 
+  if (array[midPosition] === element) {
+    return midPosition;
+  }
+  else if (array.length === 1) {
+    return null;
+  }
+  else if (array[midPosition] < element) {
+    let arr = array.slice(midPosition + 1);
+    let res = question18(arr, element);
+
+    if (res === null) {
+      return null;
+    }
+    else {
+      return midPosition + 1 + res;
+    }
+  }
+  else {
+    let arr1 = array.slice(0, midPosition);
+
+    return question18(arr1, element);
+  }
+}
+console.log(question18([1, 2, 3, 5, 6, 7, 10, 11, 14, 15, 17, 19, 20, 22, 23], 6));
+//
 // 19. Write a JavaScript function that returns array elements larger than a number.
-
+console.log("%cJavaScript Functions #19", "color: red");
+function question19(array, val) {
+  return array.filter(function (evalue, index, array) {
+    return (evalue >= val);
+  });
+}
+console.log(question19([11,45,4,31,64,10], 10));
+//
 // 20. Write a JavaScript function that generates a string ID (specified length) of random characters.
 // Sample character list : "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+console.log("%cJavaScript Functions #20", "color: red");
+function question20(length) {
+  let text = "";
+  let list = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
+  for (let i = 0; i < length; i++) {
+    text += list.charAt(Math.floor(Math.random() * list.length));
+  }
+  return text;
+}
+console.log(question20(8));
+//
 // 21. Write a JavaScript function to get all possible subsets with a fixed length (for example 2) combinations in an array.
 // Sample array : [1, 2, 3] and subset length is 2
 // Expected output : [[1,2],[1,3],[2,3]]
