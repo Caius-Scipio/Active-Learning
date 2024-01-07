@@ -286,31 +286,167 @@ console.log(question20(8));
 // 21. Write a JavaScript function to get all possible subsets with a fixed length (for example 2) combinations in an array.
 // Sample array : [1, 2, 3] and subset length is 2
 // Expected output : [[1,2],[1,3],[2,3]]
+console.log("%cJavaScript Functions #21", "color: red");
+function question21(array, length) {
+  let result = [];
 
+  function subsets(current, start) {
+    if (current.length === length) {
+      result.push([...current]);
+      return;
+    }
+    for (let i = start; i < array.length; i++) {
+      current.push(array[i]);
+      subsets(current, i + 1);
+      current.pop();
+    }
+  }
+  subsets([], 0);
+  return result;
+}
+console.log(question21([1,2,3], 2));
+//
 // 22. Write a JavaScript function that accepts two arguments, a string and a letter and the function will count the number of occurrences of the specified letter within the string.
 // Sample arguments : 'w3resource.com', 'o'
 // Expected output : 2
+console.log("%cJavaScript Functions #22", "color: red");
+function question22(str, search) {
+  let count = 0;
 
+  for (let i = 0; i < str.length; i++) {
+    if (str.charAt(i) === search) {
+      count++;
+    }
+  }
+  return count;
+}
+console.log(question22("JavaScript", "a"));
+//
 // 23. Write a JavaScript function to find the first not repeated character.
 // Sample arguments : 'abacddbec'
 // Expected output : 'e'
+console.log("%cJavaScript Functions #23", "color: red");
+function question23(str) {
+  let array = str.split("");
+  let result = "";
+  let counter = 0;
 
+  for (let i = 0; i < array.length; i++) {
+    counter = 0;
+    for (let j = 0; j < array.length; j++) {
+      if (array[j] === array[i]) {
+        counter++;
+      }
+    }
+    if (counter < 2) {
+      result = array[i];
+      break;
+    }
+  }
+  return result;
+}
+console.log(question23("abacddbec"));
+//
 // 24. Write a JavaScript function to apply the Bubble Sort algorithm.
 // Note : According to wikipedia "Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorithm that works by repeatedly stepping through the list to be sorted, comparing each pair of adjacent items and swapping them if they are in the wrong order".
 // Sample array : [12, 345, 4, 546, 122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213]
 // Expected output : [3223, 546, 455, 345, 234, 213, 122, 98, 84, 64, 23, 12, 9, 4, 1]
+console.log("%cJavaScript Functions #24", "color: red");
+function question24(array) {
+  let change;
+  let end = array.length - 1;
+  let newArray = array;
 
+  do {
+    change = false;
+    for (let i = 0; i < end; i++) {
+      if (newArray[i] < newArray[i + 1]) {
+        let temp = newArray[i];
+        newArray[i] = newArray[i + 1];
+        newArray[i + 1] = temp;
+        change = true;
+      }
+    }
+    end--;
+  } while (change);
+  return newArray;
+}
+console.log(question24([12, 345, 4, 546, 122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213]));
+//
 // 25. Write a JavaScript function that accepts a list of country names as input and returns the longest country name as output.
 // Sample function : Longest_Country_Name(["Australia", "Germany", "United States of America"])
 // Expected output : "United States of America"
-
+console.log("%cJavaScript Functions #25", "color: red");
+function question25(array) {
+  let sortedArray = array.sort((a, b) => b.length - a.length);
+  return sortedArray[0];
+}
+console.log(question25(["Australia", "Germany", "United States of America"]));
+//
 // 26. Write a JavaScript function to find the longest substring in a given string without repeating characters.
+console.log("%cJavaScript Functions #26", "color: red");
+function question26(str) {
+  let longestSubstring = "";
+  let start = 0;
+  let charMap = {};
 
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+    if (charMap[char] !== undefined && charMap[char] >= start) {
+      start = charMap[char] + 1;
+    }
+    charMap[char] = i;
+    let currentSubstring = str.slice(start, i + 1);
+    if (currentSubstring.length > longestSubstring.length) {
+      longestSubstring = currentSubstring;
+    }
+  }
+  return longestSubstring;
+}
+console.log(question26("example.com"));
+//
 // 27. Write a JavaScript function that returns the longest palindrome in a given string.
 
 // Note: According to Wikipedia "In computer science, the longest palindromic substring or longest symmetric factor problem is the problem of finding a maximum-length contiguous substring of a given string that is also a palindrome. For example, the longest palindromic substring of "bananas" is "anana". The longest palindromic substring is not guaranteed to be unique; for example, in the string "abracadabra", there is no palindromic substring with length greater than three, but there are two palindromic substrings with length three, namely, "aca" and "ada".
 // In some applications it may be necessary to return all maximal palindromic substrings (that is, all substrings that are themselves palindromes and cannot be extended to larger palindromic substrings) rather than returning only one substring or returning the maximum length of a palindromic substring.
+console.log("%cJavaScript Functions #27", "color: red");
+function question27(str) {
+  return str === str.split("").reverse().join("");
+}
 
+function question27a(str) {
+  let maxLength = 0;
+  let result = "";
+
+  for (let i = 0; i < str.length; i++) {
+    for (let j = i + 1; j <= str.length; j++) {
+      let substring = str.slice(i, j);
+
+      if (question27(substring) && substring.length > maxLength) {
+        maxLength = substring.length;
+        result = substring;
+      }
+    }
+  }
+
+  return result;
+}
+console.log(question27a("HYTBCABADEFGHABCDEDCBAGHTFYW12345678987654321ZWETYGDE"));
+//
 // 28. Write a JavaScript program to pass a 'JavaScript function' as a parameter.
-
+console.log("%cJavaScript Functions #28", "color: red");
+function question28(callback) {
+  callback();
+}
+function callback() {
+  console.log(`Hello world`);
+}
+console.log(question28(callback));
+//
 // 29. Write a JavaScript function to get the function name.
+console.log("%cJavaScript Functions #29", "color: red");
+function question29() {
+  console.log(arguments.callee.name);
+}
+console.log(question29());
+//

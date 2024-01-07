@@ -4,7 +4,7 @@
  *   JavaScript Fundamental (ES6 version) Part-I [ 150 Exercises with Solution ]
  *   JavaScript Fundamental (ES6 version) Part-II [ 116 Exercises with Solution ]
  *   JavaScript Error Handling [ 13 Exercises with Solution ]
- *   JavaScript Functions [ 29 Exercises with Solution ]                                     // TODO 21 - 29
+ * JavaScript Functions [ 29 Exercises with Solution ]                                     // * Completed
  *   JavaScript Recursion [ 13 Exercises with Solution ]
  * JavaScript Conditional Statements and loops [ 12 Exercises with Solution ]              // * Completed
  *   JavaScript Event Handling [ 10 exercises with solution ]                                // TODO # 3 - 10 and 9th
