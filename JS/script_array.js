@@ -36,7 +36,7 @@ console.log(question02([1, 2, 3, 4]));
 // [7, 9, 0]
 // [7, 9, 0, -2]
 // []
-console.log("%cJavaScript Array #3", "color: red");
+console.log("%cJavaScript Array #4", "color: red");
 function question03(array, n) {
   return n > 0 ? array.slice(0, n) : array.slice(0, 1);
 }
@@ -51,26 +51,64 @@ console.log(question03([7, 9, 0, -2], 3));
 // -2
 // [9, 0, -2]
 // [7, 9, 0, -2]
-// Click me to see the solution
+console.log("%cJavaScript Array #4", "color: red");
+function question04(array, n) {
+  if (array === null) {
+    return 0;
+  }
+  else if (n === undefined) {
+    return array[array.length - 1];
+  }
+  else {
+    return array.slice(Math.max(array.length - n, 0));
+  }
+}
+console.log(question04([7, 9, 0, -2]));
+console.log(question04([7, 9, 0, -2], 3));
+//
 // 5. Write a simple JavaScript program to join all elements of the following array into a string.
 // Sample array : myColor = ["Red", "Green", "White", "Black"];
 // Expected Output :
 // "Red,Green,White,Black"
 // "Red,Green,White,Black"
 // "Red+Green+White+Black"
-
+console.log("%cJavaScript Array #5", "color: red");
+function question05(array) {
+  return array.toString();
+}
+console.log(question05(["Red", "Green", "White", "Black"]));
+//
 // 6. Write a JavaScript program that accepts a number as input and inserts dashes (-) between each even number. For example if you accept 025468 the output should be 0-254-6-8.
+console.log("%cJavaScript Array #6", "color: red");
+function question06(num) {
+  const str = num.toString();
+  const result = [str[0]];
 
+  for (let i = 1; i < str.length; i++) {
+    if ((str[i - 1] % 2 === 0) && (str[i] % 2 === 0)) {
+      result.push("-", str[i]);
+    }
+    else {
+      result.push(str[i]);
+    }
+  }
+  return result.join("");
+}
+console.log(question06("025468"));
+//
 // 7. Write a JavaScript program to sort the items of an array.
 // Sample array : var arr1 = [ -3, 8, 7, 6, 5, -4, 3, 2, 1 ];
 // Sample Output : -4,-3,1,2,3,5,6,7,8
-
+console.log("%cJavaScript Array #7", "color: red");
+//
 // 8. Write a JavaScript program to find the most frequent item in an array.
 // Sample array : var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
 // Sample Output : a ( 5 times )
-
+console.log("%cJavaScript Array #8", "color: red");
+//
 // 9. Write a JavaScript program that accepts a string as input and swaps the case of each character. For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'.
-
+console.log("%cJavaScript Array #9", "color: red");
+//
 // 10. Write a JavaScript program that prints the elements of the following array.
 // Note : Use nested for loops.
 // Sample array : var a = [[1, 2, 1, 24], [8, 11, 9, 4], [7, 0, 7, 27], [7, 4, 28, 14], [3, 10, 26, 7]];
