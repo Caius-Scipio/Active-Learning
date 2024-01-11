@@ -100,14 +100,50 @@ console.log(question06("025468"));
 // Sample array : var arr1 = [ -3, 8, 7, 6, 5, -4, 3, 2, 1 ];
 // Sample Output : -4,-3,1,2,3,5,6,7,8
 console.log("%cJavaScript Array #7", "color: red");
+function question07(array) {
+  return array.sort((a, b) => a - b);
+}
+console.log(question07([-3, 8, 7, 6, 5, -4, 3, 2, 1]));
 //
 // 8. Write a JavaScript program to find the most frequent item in an array.
 // Sample array : var arr1=[3, 'a', 'a', 'a', 2, 3, 'a', 3, 'a', 2, 4, 9, 3];
 // Sample Output : a ( 5 times )
 console.log("%cJavaScript Array #8", "color: red");
+function question08(array) {
+  let result = "";
+  let resultCount = 0;
+  let count = 1;
+  for (let i = 0; i < array.length; i++) {
+    for (let j = 1; j < array.length; j++) {
+      if (array[i] === array[j]) {
+        resultCount++;
+      }
+      if (count < resultCount) {
+        count = resultCount;
+        result = array[i];
+      }
+    }
+    resultCount = 0;
+  }
+  return (`${result} ( ${count} times )`);
+}
+console.log(question08([3, "a", "a", "a", 2, 3, "a", 3, "a", 2, 4, 9, 3]));
 //
 // 9. Write a JavaScript program that accepts a string as input and swaps the case of each character. For example if you input 'The Quick Brown Fox' the output should be 'tHE qUICK bROWN fOX'.
 console.log("%cJavaScript Array #9", "color: red");
+function question09(str) {
+  let newStr = "";
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === str[i].toUpperCase()) {
+      newStr += str[i].toLowerCase();
+    }
+    else {
+      newStr += str[i].toUpperCase();
+    }
+  }
+  return newStr;
+}
+console.log(question09("The Quick Brown Fox"));
 //
 // 10. Write a JavaScript program that prints the elements of the following array.
 // Note : Use nested for loops.
