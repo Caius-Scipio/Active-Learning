@@ -157,11 +157,51 @@ console.log(question09("The Quick Brown Fox"));
 // "row 1"
 // ------
 // ------
-
+console.log("%cJavaScript Array #10", "color: red");
+function question10(arr) {
+  let result = "";
+  for (let i = 0; i < arr.length; i++) {
+    result += "row " +  i + `\n`;
+    for (let j = 0; j < arr[i].length; j++) {
+      result += arr[i][j] + `\n`;
+    }
+  }
+  return result;
+}
+console.log(
+  question10([
+    [1, 2, 1, 24],
+    [8, 11, 9, 4],
+    [7, 0, 7, 27],
+    [7, 4, 28, 14],
+    [3, 10, 26, 7],
+  ])
+);
+//
 // 11. Write a JavaScript program to find the sum of squares of a numerical vector.
-
+console.log("%cJavaScript Array #11", "color: red");
+function question11(arr) {
+  let result = 0;
+  for (elements of arr) {
+    result += Math.pow(elements, 2);
+  }
+  return result;
+}
+console.log(question11([0, 1, 2, 3, 4]));
+//
 // 12. Write a JavaScript program to compute the sum and product of an array of integers.
-
+console.log("%cJavaScript Array #12", "color: red");
+function question12(arr) {
+  let sum = 0;
+  let product = 1;
+  for (elements of arr) {
+    sum += elements;
+    product *= elements;
+  }
+  return `Sum: ${sum} Product: ${product}`;
+}
+console.log(question12([1, 2, 3, 4, 5, 6]));
+//
 // 13. Write a JavaScript program to add items to a blank array and display them.
 // Sample Screen :
 // add elements in an blank array
