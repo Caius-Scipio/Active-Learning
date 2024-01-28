@@ -203,11 +203,25 @@ function question12(arr) {
 console.log(question12([1, 2, 3, 4, 5, 6]));
 //
 // 13. Write a JavaScript program to add items to a blank array and display them.
-// Sample Screen :
-// add elements in an blank array
-
+console.log("%cJavaScript Array #13", "color: red");
+function question13(array) {
+  let arr = array;
+  for (let i = 0; i < 5; i++) {
+    arr.push(i);
+  }
+  return arr;
+}
+console.log(question13([]));
+//
 // 14. Write a JavaScript program to remove duplicate items from an array (ignore case sensitivity).
-
+console.log("%cJavaScript Array #14", "color: red");
+function question14(array) {
+  let result = new Set(array);
+  result = [...result];
+  return result;
+}
+console.log(question14([1, 2, 3, 4, 1, 5, 2]));
+//
 // 15. We have the following arrays :
 // color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
 // o = ["th","st","nd","rd"]
@@ -217,9 +231,38 @@ console.log(question12([1, 2, 3, 4, 5, 6]));
 // "3rd choice is Red."
 // - - - - - - - - - - - - -
 // Note : Use ordinal numbers to tell their position.
-
+console.log("%cJavaScript Array #15", "color: red");
+function question15(color, o) {
+  for (let i = 0; i < color.length; i++) {
+    let suffix = i + 1 <= 3 ? o[i + 1] : o[0];
+    console.log(`${i + 1}${suffix} choice is ${color[i]}.`);
+  }
+}
+let color = ["Blue ", "Green", "Red", "Orange", "Violet", "Indigo", "Yellow "];
+let o = ["th", "st", "nd", "rd"];
+console.log(question15(color, o));
+//
 // 16. Write a JavaScript program to find the leap years in a given range of years.
+console.log("%cJavaScript Array #16", "color: red");
+function question16(yearStart, yearEnd) {
+  let yearRange = [];
+  let yearLeap = [];
 
+  for (let i = yearStart; i <= yearEnd; i++) {
+    yearRange.push(i);
+  }
+
+  yearRange.forEach(
+    function(year) {
+      if (year % 100 === 0 ? year % 400 === 0 : year % 4 === 0) {
+        yearLeap.push(year);
+      }
+    }
+  );
+  return yearLeap;
+}
+console.log(question16(2000, 2016));
+//
 // 17. Write a JavaScript program to shuffle an array.
 
 // 18. Write a JavaScript program to perform a binary search.

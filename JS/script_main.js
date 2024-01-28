@@ -11,7 +11,7 @@
  *   JavaScript Asynchronous Programming [ 9 exercises with solution ]
  *   JavaScript Object-Oriented Programming [ 12 exercises with solution ]
  *   JavaScript Math [ 114 Exercises with Solution ]                                         // ! Do 7th
- *   JavaScript Array [ 53 Exercises with Solution ]                                         // TODO # 13 - 53
+ *   JavaScript Array [ 53 Exercises with Solution ]                                         // TODO # 17 - 53
  *   JavaScript Stack [35 exercises with solution]
  *   JavaScript Linked List [35 exercises with solution]
  *   JavaScript Date [ 57 Exercises with Solution ]                                          // ! Do 8th
