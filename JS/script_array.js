@@ -264,7 +264,24 @@ function question16(yearStart, yearEnd) {
 console.log(question16(2000, 2016));
 //
 // 17. Write a JavaScript program to shuffle an array.
+console.log("%cJavaScript Array #17", "color: red");
 
+function question17(array) {
+  let counter = array.length;
+  let temp = null;
+  let index = null;
+
+  while (counter > 0) {
+    index = Math.floor(Math.random() * counter);
+    counter--;
+    temp = array[counter];
+    array[counter] = array[index];
+    array[index] = temp;
+  }
+  return array;
+}
+console.log(question17([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]));
+//
 // 18. Write a JavaScript program to perform a binary search.
 // Note : A binary search or half-interval search algorithm finds the position of a specified input value within an array sorted by key value.
 // Sample array :
@@ -272,14 +289,58 @@ console.log(question16(2000, 2016));
 // Expected Output :
 // console.log(binary_Search(items, 1)); //0
 // console.log(binary_Search(items, 5)); //4
+console.log("%cJavaScript Array #18", "color: red");
 
+function question18(items, value) {
+  let firstIndex = 0;
+  let lastIndex = items.length - 1;
+  let middleIndex = Math.floor((lastIndex + firstIndex) / 2);
+  while (items[middleIndex] != value && firstIndex < lastIndex) {
+    if (value < items[middleIndex]) {
+      lastIndex = middleIndex - 1;
+    } else if (value > items[middleIndex]) {
+      firstIndex = middleIndex + 1;
+    }
+    middleIndex = Math.floor((lastIndex + firstIndex) / 2);
+  }
+  return items[middleIndex] != value ? -1 : middleIndex;
+}
+console.log(question18([1, 2, 3, 4, 5, 7, 8, 9], 1));
+//
 // 19. There are two arrays with individual values. Write a JavaScript program to compute the sum of each individual index value in the given array.
 // Sample array :
 // array1 = [1,0,2,3,4];
 // array2 = [3,5,6,7,8,13];
 // Expected Output :
 // [4, 5, 8, 10, 12, 13]
+console.log("%cJavaScript Array #19", "color: red");
 
+function question19(array1, array2) {
+  let result = [];
+  let counter = 0;
+  if (array1.length === 0) return "array1 is empty";
+  if (array2.length === 0) return "array2 is empty";
+
+  while (counter < array1.length && counter < array2.length) {
+    result.push(array1[counter] + array2[counter]);
+    counter++;
+  }
+
+  if (counter === array1.length) {
+    for (i = counter; i < array2.length; i++) {
+      result.push(array2[i]);
+    }
+  }
+  else {
+    // Append the remaining elements from array1 to the result array
+    for (i = counter; i < array1.length; i++) {
+      result.push(array1[i]);
+    }
+  }
+  return result;
+}
+console.log(question19([1, 0, 2, 3, 4], [3, 5, 6, 7, 8, 13]));
+//
 // 20. Write a JavaScript program to find duplicate values in a JavaScript array.
 
 // 21. Write a JavaScript program to flatten a nested (any depth) array. If you pass shallow, the array will only be flattened to a single level.
