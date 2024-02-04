@@ -55,11 +55,9 @@ console.log("%cJavaScript Array #4", "color: red");
 function question04(array, n) {
   if (array === null) {
     return 0;
-  }
-  else if (n === undefined) {
+  } else if (n === undefined) {
     return array[array.length - 1];
-  }
-  else {
+  } else {
     return array.slice(Math.max(array.length - n, 0));
   }
 }
@@ -85,10 +83,9 @@ function question06(num) {
   const result = [str[0]];
 
   for (let i = 1; i < str.length; i++) {
-    if ((str[i - 1] % 2 === 0) && (str[i] % 2 === 0)) {
+    if (str[i - 1] % 2 === 0 && str[i] % 2 === 0) {
       result.push("-", str[i]);
-    }
-    else {
+    } else {
       result.push(str[i]);
     }
   }
@@ -125,7 +122,7 @@ function question08(array) {
     }
     resultCount = 0;
   }
-  return (`${result} ( ${count} times )`);
+  return `${result} ( ${count} times )`;
 }
 console.log(question08([3, "a", "a", "a", 2, 3, "a", 3, "a", 2, 4, 9, 3]));
 //
@@ -136,8 +133,7 @@ function question09(str) {
   for (let i = 0; i < str.length; i++) {
     if (str[i] === str[i].toUpperCase()) {
       newStr += str[i].toLowerCase();
-    }
-    else {
+    } else {
       newStr += str[i].toUpperCase();
     }
   }
@@ -161,7 +157,7 @@ console.log("%cJavaScript Array #10", "color: red");
 function question10(arr) {
   let result = "";
   for (let i = 0; i < arr.length; i++) {
-    result += "row " +  i + `\n`;
+    result += "row " + i + `\n`;
     for (let j = 0; j < arr[i].length; j++) {
       result += arr[i][j] + `\n`;
     }
@@ -252,13 +248,11 @@ function question16(yearStart, yearEnd) {
     yearRange.push(i);
   }
 
-  yearRange.forEach(
-    function(year) {
-      if (year % 100 === 0 ? year % 400 === 0 : year % 4 === 0) {
-        yearLeap.push(year);
-      }
+  yearRange.forEach(function (year) {
+    if (year % 100 === 0 ? year % 400 === 0 : year % 4 === 0) {
+      yearLeap.push(year);
     }
-  );
+  });
   return yearLeap;
 }
 console.log(question16(2000, 2016));
@@ -330,8 +324,7 @@ function question19(array1, array2) {
     for (i = counter; i < array2.length; i++) {
       result.push(array2[i]);
     }
-  }
-  else {
+  } else {
     // Append the remaining elements from array1 to the result array
     for (i = counter; i < array1.length; i++) {
       result.push(array1[i]);
@@ -342,19 +335,70 @@ function question19(array1, array2) {
 console.log(question19([1, 0, 2, 3, 4], [3, 5, 6, 7, 8, 13]));
 //
 // 20. Write a JavaScript program to find duplicate values in a JavaScript array.
-
+console.log("%cJavaScript Array #20", "color: red");
+function question20(array) {
+  let item = {};
+  let result = [];
+  array.forEach(function (element) {
+    if (!item[element]) {
+      item[element] = 0;
+    }
+    item[element] += 1;
+  });
+  for (let prop in item) {
+    if (item[prop] >= 2) {
+      result.push(prop);
+    }
+  }
+  return result;
+}
+console.log(question20([1, 2, -2, 4, 5, 4, 7, 8, 7, 7, 71, 3, 6]));
+//
 // 21. Write a JavaScript program to flatten a nested (any depth) array. If you pass shallow, the array will only be flattened to a single level.
 // Sample Data :
 // console.log(flatten([1, [2], [3, [[4]]],[5,6]]));
 // [1, 2, 3, 4, 5, 6]
 // console.log(flatten([1, [2], [3, [[4]]],[5,6]], true));
 // [1, 2, 3, [[4]], 5, 6]
-
+console.log("%cJavaScript Array #21", "color: red");
+function question21(arr, shallow, result) {
+  if (!result) {
+    result = [];
+  }
+  if (shallow) {
+    return result.concat.apply(result, arr);
+  }
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i].constructor == Array) {
+      question21(arr[i], shallow, result);
+    } else {
+      result.push(arr[i]);
+    }
+  }
+  return result;
+}
+console.log(question21([1, [2], [3, [[4]]], [5, 6]]));
+//
 // 22. Write a JavaScript program to compute the union of two arrays.
 // Sample Data :
 // console.log(union([1, 2, 3], [100, 2, 1, 10]));
 // [1, 2, 3, 10, 100]
-
+console.log("%cJavaScript Array #22", "color: red");
+function question22(arr1, arr2) {
+  let obj = {};
+  let result = [];
+  if (arr1 == null || arr2 == null) {
+    return;
+  }
+  for (let i = arr1.length - 1; i >= 0; --i) obj[arr1[i]] = arr1[i];
+  for (let i = arr2.length - 1; i >= 0; --i) obj[arr2[i]] = arr2[i];
+  for (let element in obj) {
+    if (obj.hasOwnProperty(element)) result.push(obj[element]);
+  }
+  return result;
+}
+console.log(question22([1, 2, 3], [100, 2, 1, 10]));
+//
 // 23. Write a JavaScript function to find the difference between two arrays.
 // Test Data :
 // console.log(difference([1, 2, 3], [100, 2, 1, 10]));
@@ -371,7 +415,7 @@ console.log(question19([1, 0, 2, 3, 4], [3, 5, 6, 7, 8, 13]));
 // 25. Write a JavaScript function to sort the following array of objects by title value.
 // Sample object :
 
-// var library = [ 
+// var library = [
 //    { author: 'Bill Gates', title: 'The Road Ahead', libraryID: 1254},
 //    { author: 'Steve Jobs', title: 'Walter Isaacson', libraryID: 4264},
 //    { author: 'Suzanne Collins', title: 'Mockingjay: The Final Book of The Hunger Games', libraryID: 3245}
@@ -396,7 +440,6 @@ console.log(question19([1, 0, 2, 3, 4], [3, 5, 6, 7, 8, 13]));
 // Input: numbers= [10,20,10,40,50,60,70], target=50
 // Output: 2, 3
 
-
 // 27. Write a JavaScript function to retrieve the value of a given property from all elements in an array.
 // Sample array : [NaN, 0, 15, false, -22, '',undefined, 47, null]
 // Expected result : [15, -22, 47]
@@ -405,7 +448,6 @@ console.log(question19([1, 0, 2, 3, 4], [3, 5, 6, 7, 8, 13]));
 
 // Sample array : console.log(longest_common_starting_substring(['go', 'google']));
 // Expected result : "go"
-
 
 // 29. Write a JavaScript function to fill an array with values (numeric, string with one character) within supplied bounds.
 
@@ -420,7 +462,6 @@ console.log(question19([1, 0, 2, 3, 4], [3, 5, 6, 7, 8, 13]));
 // var array2 = [2, 30, 1];
 // console.log(merge_array(array1, array2));
 // [3, 2, 30, 1]
-
 
 // 31. Write a JavaScript function to remove a specific element from an array.
 
@@ -437,16 +478,13 @@ console.log(question19([1, 0, 2, 3, 4], [3, 5, 6, 7, 8, 13]));
 
 // 33. Write a JavaScript script to empty an array while keeping the original.
 
-
 // 34. Write a JavaScript function to get the nth largest element from an unsorted array.
 
 // Test Data :
 // console.log(nthlargest([ 43, 56, 23, 89, 88, 90, 99, 652], 4));
 // 89
 
-
 // 35. Write a JavaScript function to get random items from an array.
-
 
 // 36. Write a JavaScript function to create a specified number of elements with a pre-filled numeric value array.
 
@@ -455,7 +493,6 @@ console.log(question19([1, 0, 2, 3, 4], [3, 5, 6, 7, 8, 13]));
 // [0, 0, 0, 0, 0, 0]
 // console.log(array_filled(4, 11));
 // [11, 11, 11, 11]
-
 
 // 37. Write a JavaScript function to create a specified number of elements with a pre-filled string value array.
 
